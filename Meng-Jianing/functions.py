@@ -3,37 +3,39 @@
 # @Author  : Meng Jianing
 # @FileName: functions.py
 # @Software: PyCharm
-# @Versions: v0.1
+# @Versions: v0.5
 # @Github  ：https://github.com/NekoSilverFox
+# --------------------------------------------
+
 import random
 
+# 保存用户ID
+# Сохранить ID пользователя
+gl_id_list = []
+
+# 键值对 <--> 问题（小写）和回答
+# Пары ключ-значение <--> вопрос (НИЖНИЙ регистр) и ответ
 gl_questions_answers = {
     # Attention! Questions should be in all lowercase!
     "студклубе": "Хотите узнать что-то ещё?",
     "контакты управления": "Хотите узнать что-то ещё?",
     "hello123": "Hello there",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "help": "",
+    "русский": "Текущим языком уже является русский",
+    "english": "Скоро появится функция переключения языков!",
+    "中文": "Скоро появится функция переключения языков!",
 }
 
-class UserInfo:
-    id = 0
-    index = 1
-
-
-gl_id_list = []
 
 def sender(vk_session, id_type, id, message=None, keyboard=None, attachment=None):
     """ 发送消息或键盘
 
-    :param vk_session:
-    :param id_type:
-    :param id:
-    :param message:
-    :param keyboard:
-    :param attachment:
+    :param vk_session: 用户组
+    :param id_type: ID类型
+    :param id: id
+    :param message: [string] 要发送的信息
+    :param keyboard: 键盘
+    :param attachment: [可选]为了向老版本的应用兼容
     :return:
     """
     vk_session.method('messages.send',
@@ -42,7 +44,6 @@ def sender(vk_session, id_type, id, message=None, keyboard=None, attachment=None
 
 
 def get_answer_from_dec(question):
-    # TODO
     """ 从 xml 获取指定问题或关键字的回答并返回
 
     :param question: [string] 问题的字符串或者关键字
@@ -52,7 +53,6 @@ def get_answer_from_dec(question):
         answer = gl_questions_answers[question]
     except Exception as unknown:
         answer = ''
-
     return answer
 
 
@@ -66,6 +66,7 @@ def is_first_time_use(id):
         gl_id_list.append(id)
         return True
     return False
+
 
 def change_language(language):
     # TODO 把语言的对应表存放在集合当中，
