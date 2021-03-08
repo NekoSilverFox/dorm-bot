@@ -16,10 +16,10 @@ from create_keyboard import create_keyboard
 
 # API秘钥  Секретный ключ для входа
 """ For test ↓ """
-TOKEN_API = 'a6f3aed603c5e47cfdd0d1f4945082534e2cbea390f71b171bd0475132ddf572538a79a138c878dc9fa2c'
+# TOKEN_API = 'a6f3aed603c5e47cfdd0d1f4945082534e2cbea390f71b171bd0475132ddf572538a79a138c878dc9fa2c'
 
 """ For use ↓ """
-# TOKEN_API = '9ab7e183aa0bd0c1d7cb5e60cbb166db781b546abd17617bc7d2f815c36bbd9fd683883b0cfa76867f522'
+TOKEN_API = '9ab7e183aa0bd0c1d7cb5e60cbb166db781b546abd17617bc7d2f815c36bbd9fd683883b0cfa76867f522'
 MSG_WELCOME = 'Hi, I am Robot-Spbstu! You can use the keyboard or ask me questions!'
 MSG_NO_ANSWER = 'Ой, я незнаю таких слов! (〃´-ω･) '
 
@@ -46,7 +46,7 @@ def main():
                            keyboard=create_keyboard('scheme-1-1'))
 
                 elif keyboard is not None:
-                    # msg_with_keyboard = ?  # TODO 当按钮发送时顺带发送的信息，以便是 `message` 进行替换
+                    # msg_with_keyboard = ?  # TODO 当按钮发送时顺带发送的信息，以便为 `message` 进行替换
                     sender(vk_session, 'user_id', user_id, message='Menu has created!', keyboard=keyboard)
 
                 else:  # keyboard is None and is_first_time_use(user_id)=False:
@@ -57,4 +57,9 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except Exception as unknown:
+        print('[ERROR] Catch exception: %s' % unknown)
+        main()
+        print('[WARNING] Robot restart')
