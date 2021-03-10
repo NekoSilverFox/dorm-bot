@@ -3,11 +3,13 @@
 # @Author  : Meng Jianing
 # @FileName: create_keyboard.py
 # @Software: PyCharm
-# @Versions: v0.5
+# @Versions: v0.7
 # @Github  ：https://github.com/NekoSilverFox
 # --------------------------------------------
 
 from vk_api.keyboard import VkKeyboard, VkKeyboardColor
+from functions import Language, gl_id_list
+
 
 to_scheme_1_1 = ['scheme-1-1', 'scheme-1', 'в начало', '菜单', '主菜单', 'main_menu', 'main',
                  'вассап', 'здрасте', 'приветик', 'начать', 'салом алейкум', 'здравствуйте',
@@ -27,9 +29,53 @@ to_relations_with = ['взаимоотношения с...', 'взаимоотн
 to_moving_into_dorm = ['Переезд в общежитие', 'в общежитие', 'Переезд общежитие', '',
                        'Moving into a dormitory', 'Moving into dormitory', 'into dormitory',
                        'Moving into the dormitory', 'Moving into a dorm', 'Moving to a dormitory', '']
+to_first_language = []
+
+WEBSITE = ('Website', 'Сайт', '网站')
+VK = ('VK', 'ВК', 'VK')
+CLUB = ('Студклубе', 'Student Club', '学生俱乐部')
+NEXT = ('Далее', 'Next', '下一页')
+MANAGEMENT_CONTACTS = ('Контакты управления', 'Management contacts', '管理联络人')
+ACCOMMODATION_RULES = ('Правила проживания', 'Accommodation rules', '住宿规则')
+COMPLEXES = ('Комплексы', 'Complexes', '复合体')
+ADVICE = ('Советы', 'Advice', '建议')
+FROUNT = ('Назад', 'Back', '返回')
+CHANGE_LANGUAGE = ('Сменить язык', 'Change language', '改变语言')
+SET_RUSSIA = ('русский', '', '', '', '')
+SET_ENGLISH = ('english', '', '', '', '')
+SET_CHINESE = ('中文', '', '', '', '')
+INTERNAL_REGULATIONS = ('Внутренний распорядок', 'Internal regulations', '内部规定')
+TO_THE_BEGINING = ('В начало', 'To the begin', '主页')
+LESNOY_PROSPECT = ('Лесной проспект', 'Lesnoy prospect', '森林大街')
+COURAGE_SQUARE = ('Площадь Мужества', 'Courage Square', '勇气广场')
+CIVIL_PROSPECT = ('Гражданский проспект', 'Civil Prospect', '公民大街')
+SCIENCE_POLYTECH = ('Гостиницу "Наука-Политех"', 'Hotel "Science-Polytech"', '酒店“加工的科学”')
+COMPLEX_OF_ADDITIONAL_SERVICES_FOR_RESIDENTS = ('омплекс доп-ого обс-ия проживающих', 'complex of additional services for residents', '为居民提供的其他服务综合体')
+RELATIONSHIP_WITH = ('Взаимоотношения с...', 'Relationship with...', '联系...')
+MOVING_TO_THE_DORM = ('Переезд в общежитие', 'Moving to the dorm', '搬到宿舍')
+# INTERNAL_REGULATIONS = ('', '', '')
+PAYMENT = ('Оплата', 'Pay', '支付')
+DORM_SHORT = ('Общ-ие', 'Dorm', '宿舍')
+DORM_LONG = ('Общежитие', 'Dormitory', '宿舍')
+CHECK_IN_RULES = ('Правила заселения', 'Check-in rules', '入住规则')
+ORDER_PASSAGE_PUBLIC = ('Порядок прохода в общ-ия', 'Order of passage to dorm', '进入宿舍的顺序')
+RESIDENTS_RIGHTS = ('Права проживающих', 'Residents\' rights', '居民的权利')
+COMMUNITY_OF_RESIDENTS = ('Об-сти проживающих', 'Community of residents', '居民社区')
+COMMUNITY_OF_ADMINISTRATION = ('администрации', 'administration', '行政共同体')
+BODIES_OF_THE_STUDIO_MANAGEMENT = ('Органы студ-ого управления', 'Student management bodies', '学生管理机构')
+RESPONSIBILITY_FOR_BREAKING_THE_RULES = ('Ответ-сть за нарушение правил', 'Resp-ty for breaking rules', '违反规则的责任')
+NEIGHBORS = ('Соседями', 'Neighbors', '邻居')
+ADMINISTRATION = ('Администрицией', 'Administration', '行政')
+COCKROACHES = ('Тараканами', 'Cockroaches', '蟑螂')
+WHAT_TO_TAKE_WITH_YOU = ('Что взять с собой', 'What to take with you', '随身带什么')
+WHAT_TO_BUY_LOCALLY = ('Что купить на месте', 'What to buy locally', '在当地买什么')
+
+def get_button_string(language):
+    pass
 
 
-def create_keyboard(keyword, is_one_time=False, is_inline=False):
+
+def create_keyboard(keyword, is_one_time=False, is_inline=False, language=Language.RUSSIA):
     # Схема №1, первый часть
     if keyword in to_scheme_1_1:
         # [ATTENTION] on first row ONLY can put 2 button!
@@ -177,3 +223,40 @@ def create_keyboard(keyword, is_one_time=False, is_inline=False):
         return None
 
     return keyboard.get_keyboard()
+
+
+def get_user_language(id):
+    for event in gl_id_list:
+        if event.get_id() == id:
+            return event.get_language
+    else:
+        print('[ERROR] Can not find user in `get_user_language`')
+
+
+def change_language(id, language):
+    # TODO 把语言的对应表存放在集合当中，
+    #  这样就不需要写新的函数，
+    #  在调用时就可以完成语言的匹配
+    """ 改变语言
+
+    :param language: 语言
+    :return: 无
+    """
+    if language not in Language:
+        print("[ERROR] Can't change language")
+    for event in gl_id_list:
+        if event.get_id() == id:
+            event.set_language(language)
+    else:
+        print("[ERROR] Can't find user in function `change_language`")
+
+
+def set_which_language(key_world):
+    if key_world in SET_RUSSIA:
+        return Language.RUSSIA
+    elif key_world in SET_ENGLISH:
+        return Language.ENGLISH
+    elif key_world in Language.CHINESE:
+        return Language.CHINESE
+    else:
+        print('[ERROR] Cannot match language in `set_which_language`')

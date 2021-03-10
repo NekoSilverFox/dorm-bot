@@ -3,7 +3,7 @@
 # @Author  : Meng Jianing
 # @FileName: main-robot-spbstu.py
 # @Software: Pycharm
-# @Versions: v0.5
+# @Versions: v0.7
 # @Github  ：https://github.com/NekoSilverFox
 # ~~~~~~~~~~~~~~~~~~~
 # This file is mainly for testing and use, not the final version
@@ -11,7 +11,8 @@
 
 import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
-from create_keyboard import create_keyboard
+from create_keyboard import create_keyboard, change_language, set_which_language, get_user_language
+from create_keyboard import CHANGE_LANGUAGE
 from functions import *
 
 # API秘钥  Секретный ключ для входа
@@ -47,9 +48,12 @@ def main():
 
                 elif keyboard is not None:
                     # msg_with_keyboard = ?  # TODO 当按钮发送时顺带发送的信息，以便为 `message` 进行替换
-                    sender(vk_session, 'user_id', user_id, message='Menu has created!', keyboard=keyboard)
+                    sender(vk_session, 'user_id', user_id, message='[info]Menu has created!', keyboard=keyboard)
 
                 else:  # keyboard is None and is_first_time_use(user_id)=False:
+                    if msg in CHANGE_LANGUAGE:
+                        change_language(user_id, set_which_language(msg))
+                        sender(vk_session, 'user_id', user_id, message='[info]Menu has created!', keyboard=create_keyboard('scheme-1-1'))
                     answer = get_answer_from_dec(msg)
                     if len(answer) == 0:
                         answer = MSG_NO_ANSWER

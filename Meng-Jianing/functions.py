@@ -3,7 +3,7 @@
 # @Author  : Meng Jianing
 # @FileName: functions.py
 # @Software: PyCharm
-# @Versions: v0.5
+# @Versions: v0.7
 # @Github  ：https://github.com/NekoSilverFox
 # --------------------------------------------
 
@@ -11,10 +11,29 @@ import random
 from enum import Enum
 
 
+# 保存用户ID
+# Сохранить Info пользователя
+gl_id_list = []
+
+
+# 键值对 <--> 问题（小写）和回答
+# Пары ключ-значение <--> вопрос (НИЖНИЙ регистр) и ответ
+gl_questions_answers = {
+    # Attention! Questions should be in all lowercase!
+    "студклубе": "Хотите узнать что-то ещё?",
+    "контакты управления": "Хотите узнать что-то ещё?",
+    "hello123": "Hello there",
+    "help": "",
+    "русский": "Текущим языком уже является русский",
+    "english": "Скоро появится функция переключения языков!",
+    "中文": "Скоро появится функция переключения языков!",
+}
+
+
 class Language(Enum):
+    ENGLISH = 0
     RUSSIA = 1
     CHINESE = 2
-    ENGLISH = 3
 
 
 class UserInfo(object):
@@ -38,23 +57,8 @@ class UserInfo(object):
     def set_language(self, language):
         self.__language = language
 
-
-# 保存用户ID
-# Сохранить ID пользователя
-gl_id_list = []
-
-# 键值对 <--> 问题（小写）和回答
-# Пары ключ-значение <--> вопрос (НИЖНИЙ регистр) и ответ
-gl_questions_answers = {
-    # Attention! Questions should be in all lowercase!
-    "студклубе": "Хотите узнать что-то ещё?",
-    "контакты управления": "Хотите узнать что-то ещё?",
-    "hello123": "Hello there",
-    "help": "",
-    "русский": "Текущим языком уже является русский",
-    "english": "Скоро появится функция переключения языков!",
-    "中文": "Скоро появится функция переключения языков!",
-}
+    def get_language(self):
+        return self.__language
 
 
 def sender(vk_session, id_type, id, message=None, keyboard=None, attachment=None):
@@ -99,14 +103,3 @@ def is_first_time_use(id):
         gl_id_list.append(UserInfo(id))
         return True
 
-
-def change_language(language):
-    # TODO 把语言的对应表存放在集合当中，
-    #  这样就不需要写新的函数，
-    #  在调用时就可以完成语言的匹配
-    """ 改变语言
-
-    :param language: 语言
-    :return: 无
-    """
-    pass
