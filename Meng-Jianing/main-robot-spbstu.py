@@ -11,15 +11,15 @@
 
 import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
-from functions import *
 from create_keyboard import create_keyboard
+from functions import *
 
 # API秘钥  Секретный ключ для входа
 """ For test ↓ """
-# TOKEN_API = 'a6f3aed603c5e47cfdd0d1f4945082534e2cbea390f71b171bd0475132ddf572538a79a138c878dc9fa2c'
+TOKEN_API = 'a6f3aed603c5e47cfdd0d1f4945082534e2cbea390f71b171bd0475132ddf572538a79a138c878dc9fa2c'
 
 """ For use ↓ """
-TOKEN_API = '9ab7e183aa0bd0c1d7cb5e60cbb166db781b546abd17617bc7d2f815c36bbd9fd683883b0cfa76867f522'
+# TOKEN_API = '9ab7e183aa0bd0c1d7cb5e60cbb166db781b546abd17617bc7d2f815c36bbd9fd683883b0cfa76867f522'
 MSG_WELCOME = 'Hi, I am Robot-Spbstu! You can use the keyboard or ask me questions!'
 MSG_NO_ANSWER = 'Ой, я незнаю таких слов! (〃´-ω･) '
 

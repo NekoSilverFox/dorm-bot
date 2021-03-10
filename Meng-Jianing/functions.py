@@ -8,6 +8,36 @@
 # --------------------------------------------
 
 import random
+from enum import Enum
+
+
+class Language(Enum):
+    RUSSIA = 1
+    CHINESE = 2
+    ENGLISH = 3
+
+
+class UserInfo(object):
+    __count = 0
+
+    def __init__(self, id):
+        self.__id = id
+        self.__language = Language.RUSSIA
+        UserInfo.__count += 1
+        print("[INFO] user [%s] has create, UID: %05d" % (id, UserInfo.__count))
+
+    def __str__(self):
+        return "id: %s, language: %s, UID: %05d" % (self.__id, self.__language, UserInfo.__count)
+
+    def get_id(self):
+        return self.__id
+
+    def get_number_of_users(self):
+        return UserInfo.__count
+
+    def set_language(self, language):
+        self.__language = language
+
 
 # 保存用户ID
 # Сохранить ID пользователя
@@ -60,12 +90,14 @@ def is_first_time_use(id):
     """ 检查用户是否首次使用
 
     :param id: 用户或组id
-    :return: [boolen] 如果使用过即为True，未使用过为False
+    :return: [boolen] 如果使用过即为True，未使用过为False,并且添加
     """
-    if id not in gl_id_list:
-        gl_id_list.append(id)
+    for event in gl_id_list:
+        if event.get_id() == id:
+            return False
+    else:
+        gl_id_list.append(UserInfo(id))
         return True
-    return False
 
 
 def change_language(language):
