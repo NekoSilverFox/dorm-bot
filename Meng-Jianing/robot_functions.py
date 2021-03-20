@@ -3,40 +3,23 @@
 # @Author  : Meng Jianing
 # @FileName: robot_functions.py
 # @Software: PyCharm
-# @Versions: v0.7
+# @Versions: v0.8
 # @Github  ：https://github.com/NekoSilverFox
 # --------------------------------------------
 
 import random
-from enum import Enum
+import time
+from questions_answers import gl_questions_answers, Language
 
-# 保存用户 Info
-# Сохранить Info пользователя
-# key - vk ID
-# Value - UserInfo
-""" Key: Value <--> vk_id: UserInfo """
+
+""" 保存用户 Info, Сохранить Info пользователя
+key - vk ID
+Value - UserInfo
+"""
 gl_user_dic = {}
 
-# 键值对 <--> 问题（小写）和回答
-# Пары ключ-значение <--> вопрос (НИЖНИЙ регистр) и ответ
-# Attention! Questions should be in all lowercase!
-gl_questions_answers = {
-    'студклубе': 'Хотите узнать что-то ещё?',
-    'контакты управления': 'Хотите узнать что-то ещё?',
-    'hello123': 'Hello there',
-    'help': 'We also need help qwq',
-    'русский': 'Текущим языком уже является русский',
-    'english': 'Changed language to English',
-    '中文': '已将语言设置为简体中文',
-}
 
-MSG_NO_ANSWER = 'Ой, я незнаю таких слов! (〃´-ω･) '
-
-
-class Language(Enum):
-    RUSSIA = 0
-    ENGLISH = 1
-    CHINESE = 2
+MSG_NO_ANSWER = 'Ой, я незнаю таких слов! (〃´-ω･)'
 
 
 class UserInfo(object):
@@ -46,13 +29,14 @@ class UserInfo(object):
 
     def __init__(self, vk_id):
         self.__vk_id = vk_id
-        self.__language = Language.RUSSIA
+        self.__language = Language.RUSSIAN
         UserInfo.__count += 1
         self.__count_id = UserInfo.__count
-        print("[INFO] user [%s] has create, UID: %05d" % (vk_id, UserInfo.__count))
+        print('[%s]: [INFO] user VK-ID: [%s] has create, UID: %05d' % (
+            time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), vk_id, UserInfo.__count))
 
     def __str__(self):
-        return "id: %s, language: %s, UID: %05d" % (self.__vk_id, self.__language, UserInfo.__count)
+        return 'id: %s, language: %s, UID: %05d' % (self.__vk_id, self.__language, UserInfo.__count)
 
     def get_vk_id(self):
         return self.__vk_id
@@ -60,7 +44,8 @@ class UserInfo(object):
     def get_count_id(self):
         return self.__count_id
 
-    def get_number_of_users(self):
+    @staticmethod
+    def get_number_of_users():
         return UserInfo.__count
 
     def set_language(self, language):
@@ -95,7 +80,7 @@ def get_answer_from_dic(question):
     try:
         answer = gl_questions_answers[question]
     except Exception as unknown:
-        answer = MSG_NO_ANSWER  # TODO Change here?
+        answer = MSG_NO_ANSWER
     return answer
 
 
@@ -110,3 +95,11 @@ def is_first_time_use(key_vk_id):
     else:
         gl_user_dic[key_vk_id] = UserInfo(key_vk_id)
         return True
+
+
+def get_time(time_type='%Y-%m-%d %H:%M:%S'):
+    """ Get local time
+
+    :return: local time
+    """
+    return time.strftime(time_type, time.localtime())
