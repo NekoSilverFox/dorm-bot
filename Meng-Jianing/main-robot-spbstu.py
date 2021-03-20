@@ -3,7 +3,7 @@
 # @Author  : Meng Jianing
 # @FileName: main-robot-spbstu.py
 # @Software: Pycharm
-# @Versions: v0.8
+# @Versions: v0.9
 # @Github  ：https://github.com/NekoSilverFox
 # ~~~~~~~~~~~~~~~~~~~
 # This file is mainly for testing and use, not the final version
@@ -18,11 +18,13 @@ from keyboard_functions import *
 
 # API秘钥  Секретный ключ для входа
 """ For test ↓ """
-TOKEN_API = 'a6f3aed603c5e47cfdd0d1f4945082534e2cbea390f71b171bd0475132ddf572538a79a138c878dc9fa2c'
+# TOKEN_API = 'a6f3aed603c5e47cfdd0d1f4945082534e2cbea390f71b171bd0475132ddf572538a79a138c878dc9fa2c'
 
 """ For use ↓ """
-# TOKEN_API = '9ab7e183aa0bd0c1d7cb5e60cbb166db781b546abd17617bc7d2f815c36bbd9fd683883b0cfa76867f522'
-MSG_WELCOME = 'Hi, I am Robot-Spbstu! You can use the keyboard or ask me questions!'
+TOKEN_API = '9ab7e183aa0bd0c1d7cb5e60cbb166db781b546abd17617bc7d2f815c36bbd9fd683883b0cfa76867f522'
+MSG_WELCOME = 'Приветствуем в Политехе, студент! Заселяешься в общежитие и у тебя появились вопросы о проживание, ' \
+              'хочешь узнать организационную информацию или получить полезные советы? Тогда ты пришел к правильному ' \
+              'боту:) '
 RESTART_WAIT_TIME = 10
 
 

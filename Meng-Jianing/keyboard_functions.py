@@ -3,7 +3,7 @@
 # @Author  : Meng Jianing
 # @FileName: keyboard_functions.py
 # @Software: PyCharm
-# @Versions: v0.8
+# @Versions: v0.9
 # @Github  ：https://github.com/NekoSilverFox
 # --------------------------------------------
 
@@ -172,24 +172,21 @@ def create_keyboard(keyword, is_one_time=False, is_inline=False, language=Langua
     # Лесной проспект -->
     elif keyword in to_dormitory_lesnoy_prospect:
         keyboard = VkKeyboard(inline=True)
-        keyboard.add_button(DORM_SHORT[language] + ' №7', color=VkKeyboardColor.PRIMARY)
         keyboard.add_button(DORM_SHORT[language] + ' №1', color=VkKeyboardColor.PRIMARY)
-        keyboard.add_line()
         keyboard.add_button(DORM_SHORT[language] + ' №3', color=VkKeyboardColor.PRIMARY)
+        keyboard.add_line()
         keyboard.add_button(DORM_SHORT[language] + ' №4', color=VkKeyboardColor.PRIMARY)
-        keyboard.add_line()
         keyboard.add_button(DORM_SHORT[language] + ' №4а', color=VkKeyboardColor.PRIMARY)
-        keyboard.add_button(DORM_SHORT[language] + ' №5', color=VkKeyboardColor.PRIMARY)
         keyboard.add_line()
+        keyboard.add_button(DORM_SHORT[language] + ' №5', color=VkKeyboardColor.PRIMARY)
         keyboard.add_button(DORM_SHORT[language] + ' №6', color=VkKeyboardColor.PRIMARY)
+        keyboard.add_line()
+        keyboard.add_button(DORM_SHORT[language] + ' №7', color=VkKeyboardColor.PRIMARY)
         keyboard.add_button(DORM_SHORT[language] + ' №11', color=VkKeyboardColor.PRIMARY)
 
     # Площадь Мужества -->
     elif keyword in to_dormitory_courage_square:
         keyboard = VkKeyboard(inline=True)
-        keyboard.add_button(DORM_SHORT[language] + ' №17', color=VkKeyboardColor.PRIMARY)
-        keyboard.add_button(DORM_SHORT[language] + ' №18', color=VkKeyboardColor.PRIMARY)
-        keyboard.add_line()
         keyboard.add_button(DORM_SHORT[language] + ' №8', color=VkKeyboardColor.PRIMARY)
         keyboard.add_button(DORM_SHORT[language] + ' №10', color=VkKeyboardColor.PRIMARY)
         keyboard.add_line()
@@ -198,6 +195,9 @@ def create_keyboard(keyword, is_one_time=False, is_inline=False, language=Langua
         keyboard.add_line()
         keyboard.add_button(DORM_SHORT[language] + ' №14б', color=VkKeyboardColor.PRIMARY)
         keyboard.add_button(DORM_SHORT[language] + ' №14ц', color=VkKeyboardColor.PRIMARY)
+        keyboard.add_line()
+        keyboard.add_button(DORM_SHORT[language] + ' №17', color=VkKeyboardColor.PRIMARY)
+        keyboard.add_button(DORM_SHORT[language] + ' №18', color=VkKeyboardColor.PRIMARY)
 
     # Гражданский проспект -->
     elif keyword in to_dormitory_civil_prospect:
@@ -225,9 +225,9 @@ def create_keyboard(keyword, is_one_time=False, is_inline=False, language=Langua
         keyboard.add_button(DUTY_OF_RESIDENTS[language], color=VkKeyboardColor.PRIMARY)
         keyboard.add_button(DUTY_OF_ADMIN[language], color=VkKeyboardColor.PRIMARY)
         keyboard.add_line()
-        keyboard.add_button(BODIES_OF_THE_STUDIO_MANAGEMENT[language], color=VkKeyboardColor.PRIMARY)
+        keyboard.add_button(BODIES_OF_MANAGEMENT[language], color=VkKeyboardColor.PRIMARY)
         keyboard.add_line()
-        keyboard.add_button(RESPONSIBILITY_FOR_BREAKING_THE_RULES[language], color=VkKeyboardColor.PRIMARY)
+        keyboard.add_button(RESPONSIBILITY_BREAKING_RULES[language], color=VkKeyboardColor.PRIMARY)
 
     # Взаимоотношения с... -->
     elif keyword in to_relations_with:
