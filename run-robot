@@ -1,0 +1,9 @@
+#/bin/bash
+
+while :
+
+do
+
+    python3 /root/robot-spbstu/dorm-bot/Meng-Jianing/main-robot-spbstu.py >> output.log
+
+done
