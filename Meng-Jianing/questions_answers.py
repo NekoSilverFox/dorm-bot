@@ -280,11 +280,16 @@ gl_questions_answers = {
                                 'повторных нарушений возможен выговор.\n '
                                 'Возможна оплата на несколько месяцев вперед.',
     PAYMENT[
-        V_ENGLISH].lower(): 'When you move into a dormitory, you sign a rental agreement, for which you have to pay around 1000 rubles per month.\n'
+        V_ENGLISH].lower(): 'When you move into a dormitory, you sign a rental agreement, for which you have to pay '
+                            'around 1000 rubles per month.\n '
                             'The price depends on the number of people in the room, for "sealing" a little less.\n'
-                            'The price for the dormitory in winter and summer is slightly different. The current cost you can find out at the information booth in the dormitory.\n'
-                            'You can pay at any bank in the city (Sberbank, St. Petersburg) or pay.spbstu.ru. After you pay according to the requisites it is also necessary to show the receipt of payment to the administration of the hostel.\n'
-                            'The administration of the campus may summon the student to his/her house in case of debt over 3000 rubles, and in case of repeated violations he/she can be reprimanded.\n'
+                            'The price for the dormitory in winter and summer is slightly different. The current cost '
+                            'you can find out at the information booth in the dormitory.\n '
+                            'You can pay at any bank in the city (Sberbank, St. Petersburg) or pay.spbstu.ru. After '
+                            'you pay according to the requisites it is also necessary to show the receipt of payment '
+                            'to the administration of the hostel.\n '
+                            'The administration of the campus may summon the student to his/her house in case of debt '
+                            'over 3000 rubles, and in case of repeated violations he/she can be reprimanded.\n '
                             'It is possible to pay for several months in advance',
     PAYMENT[V_CHINESE].lower(): '当你搬进宿舍时，你要签订一份租房协议，每月要支付1000卢布左右。\n'
                                 '价格要看房间里的人数，对于 "紧凑 "一点的。\n'
