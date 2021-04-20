@@ -3,7 +3,7 @@
 # @Author  : Meng Jianing
 # @FileName: keyboard_functions.py
 # @Software: PyCharm
-# @Versions: v1.0
+# @Versions: v1.1
 # @Github  ：https://github.com/NekoSilverFox
 # --------------------------------------------
 
@@ -109,8 +109,8 @@ def create_keyboard(keyword, is_one_time=False, is_inline=False, language=Langua
     elif keyword in to_scheme_1_1:
         # [ATTENTION] on first row ONLY can put 2 button!
         keyboard = VkKeyboard(one_time=is_one_time, inline=is_inline)
-        keyboard.add_openlink_button(WEBSITE[language], 'https://spbstu.ru')
-        keyboard.add_openlink_button(VK[language], 'https://vk.com/pgpuspb')
+        keyboard.add_openlink_button(WEBSITE[language], 'https://www.spbstu.ru/students/social-security/hostel/')
+        keyboard.add_openlink_button(VK[language], 'https://vk.com/studg')
         keyboard.add_line()
         keyboard.add_openlink_button(ONLINE_COURSE[language], 'https://foxthere.com/spbstu/')
         keyboard.add_button(CLUB[language], color=VkKeyboardColor.PRIMARY)
