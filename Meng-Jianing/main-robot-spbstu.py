@@ -3,7 +3,7 @@
 # @Author  : Meng Jianing
 # @FileName: main-robot-spbstu.py
 # @Software: Pycharm
-# @Versions: v1.0
+# @Versions: v1.3
 # @Github  ：https://github.com/NekoSilverFox
 # ~~~~~~~~~~~~~~~~~~~
 # This file is mainly for testing and use, not the final version
