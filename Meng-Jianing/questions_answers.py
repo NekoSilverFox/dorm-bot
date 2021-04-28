@@ -33,7 +33,7 @@ V_CHINESE = Language.CHINESE.value
 # Текст в кнопках
 WEBSITE = ('Сайт', 'Website', '网站')
 VK = ('ВК', 'VK', 'VK')
-CLUB = ('СТУДКЛУБЕ', 'Student Club', '学生俱乐部')
+CLUB = ('Студклуб', 'Student Club', '学生俱乐部')
 ONLINE_COURSE = ('Порталы', 'Portals', '教育资源')
 NEXT = ('Далее', 'Next', '下一页')
 MANAGEMENT_CONTACTS = ('Контакты управления', 'Manager contacts', '联系宿管')
@@ -61,13 +61,16 @@ ORDER_PASSAGE_PUBLIC = ('Порядок прохода в общ', 'Order of pas
 RESIDENTS_RIGHTS = ('Права проживающих', 'Residents\' rights', '行为准则')
 DUTY_OF_RESIDENTS = ('Проживающие должны', 'Duty of residents', '住宿义务')
 DUTY_OF_ADMIN = ('Администрация должна', 'Duty of admin', '宿管责任')  # TODO
-BODIES_OF_MANAGEMENT = ('Органы управления', 'Student management', '学生管理机构')
-RESPONSIBILITY_BREAKING_RULES = ('НЕ НАРУШАЙТЕ ПРАВИЛА!', 'DON\'T BREAK THE RULES!', '不要违反舍规!')
+BODIES_OF_MANAGEMENT = ('Студсовет', 'Student Union', '学生会')
+RESPONSIBILITY_BREAKING_RULES = ('Нарушение правил', 'Break the rules', '违反舍规')
 NEIGHBORS = ('Соседями', 'Neighbors', '舍友')
 ADMINISTRATION = ('Администрицией', 'Administration', '行政部门')
 COCKROACHES = ('Тараканами', 'Cockroaches', '除蟑螂')
 WHAT_TO_TAKE_WITH_YOU = ('Что взять с собой', 'What to take with you', '随身带什么')
 WHAT_TO_BUY_LOCALLY = ('Что купить на месте', 'What to buy locally', '需要购买的物品')
+
+
+
 
 # 键值对 <--> 问题（小写）和回答
 # Пары ключ-значение <--> вопрос (НИЖНИЙ регистр) и ответ
@@ -93,9 +96,10 @@ gl_questions_answers = {
     ONLINE_COURSE[V_ENGLISH].lower(): 'Go!',
     ONLINE_COURSE[V_CHINESE].lower(): 'Go!',
 
-    NEXT[V_RUSSIAN].lower(): 'Далее',
-    NEXT[V_ENGLISH].lower(): 'Next',
-    NEXT[V_CHINESE].lower(): '下一页',
+    # NEXT[V_RUSSIAN].lower(): '&#13;',
+    NEXT[V_RUSSIAN].lower(): 'Показываю другие кнопки',
+    NEXT[V_ENGLISH].lower(): 'Show other buttons',
+    NEXT[V_CHINESE].lower(): '显示其他按钮',
 
     MANAGEMENT_CONTACTS[V_RUSSIAN].lower(): 'Директор Студгородка – Шнейдер Анатолий Альбертович:\n'
                                             '•	uprstg@spbstu.ru\n'
@@ -128,9 +132,9 @@ gl_questions_answers = {
     ADVICE[V_ENGLISH].lower(): 'Advice',
     ADVICE[V_CHINESE].lower(): '建议',
 
-    FRONT[V_RUSSIAN].lower(): 'Назад',
-    FRONT[V_ENGLISH].lower(): 'Back',
-    FRONT[V_CHINESE].lower(): '返回',
+    FRONT[V_RUSSIAN].lower(): 'Показываю другие кнопки',
+    FRONT[V_ENGLISH].lower(): 'Show other buttons',
+    FRONT[V_CHINESE].lower(): '显示其他按钮',
 
     CHANGE_LANGUAGE[V_RUSSIAN].lower(): 'Пожалуйста, выберите',
     CHANGE_LANGUAGE[V_ENGLISH].lower(): 'Please select',
@@ -306,9 +310,45 @@ gl_questions_answers = {
     RELATIONSHIP_WITH[V_ENGLISH].lower(): 'Relationship with...',
     RELATIONSHIP_WITH[V_CHINESE].lower(): '联系...',
 
-    MOVING_TO_THE_DORM[V_RUSSIAN].lower(): 'Переезд в общежитие',
-    MOVING_TO_THE_DORM[V_ENGLISH].lower(): 'Moving to dorm',
-    MOVING_TO_THE_DORM[V_CHINESE].lower(): '入住建议',
+    # MOVING_TO_THE_DORM[V_RUSSIAN].lower(): 'Переезд в общежитие',
+    # MOVING_TO_THE_DORM[V_ENGLISH].lower(): 'Moving to dorm',
+    # MOVING_TO_THE_DORM[V_CHINESE].lower(): '入住建议',
+
+    MOVING_TO_THE_DORM[
+        V_RUSSIAN].lower(): 'В общежитии понадобится большое количество вещей, можем вам посоветовать, что будет нужно 100%.\n\n'
+                            'Вещи для обустройства комнаты: шторы, прикроватный коврик, тёплый плед, тряпку для протирки пыли.\n\n'
+                            'Одежда: столько, сколько нужно на месяц, в общежитие есть прачечная, несколько вешалок, одежда для занятий физкультурой. Из верхней одежды возьмите осенние вещи, зимние в первое время берите. Их можно будет привести или переслать позже, если вдруг наступит плохая погода, в Санкт-Петербурге не очень холодные зимы (по сравнению с Сибирью).\n\n'
+                            'Обувь: желательно взять по две пары “летней” и межсезонной обуви, не забудьте взять сушилку для обуви. Зимнюю обувь также можно прислать позже. Потребуются кроссовки для занятий физкультурой. Также необходимы тапочки/шлепки для общаги и резиновые шлепки для похода в душ.\n\n'
+                            'Гигиенические и косметические средства: шампунь, гель для тела, мочалка (если нужна), мыло, порошок/гель для стирки (машинки в прачечной нужно засыпать своим средством), зубная щётка, зубная паста, туалетная бумага, косметические средства, ножницы для ногтей, полотенца.\n\n'
+                            'Аптечка: средство от боли, средства для решения проблем с животом, бинт, пластырь бактерицидный, мазь антисептическая, лекарства, которые тебе нужны, спрей от насморка, противопростудные и жаропонижающие препараты.\n\n'
+                            'Продукты: немного чая или кофе, немного сахара, готовая еда (котлеты, овощи и т.п.) которой хватит на 2 раза покушать (один раз перекусить пока будешь заселяться и один раз на ужин).\n\n'
+                            'Электронные приборы: ноутбук (ты будешь его носить на учебу и для того чтобы ноутбук дольше служил, заведи для него сумку), удлинители (розетки могут находиться на расстоянии от стола/кровати, либо их просто будет не хватать), точка доступа в интернет (при заселении нужно будет подписать договор с интернет компанией для подключения интернета, но модем покупать самим).\n\n'
+                            'Документы для заселения в общежитие: паспорт, парочку фотографий 3*4, результаты флюорографии, сведения о медицинских прививках.\n\n'
+                            'Кухонные принадлежности: кастрюля, сковорода (не покупайте новые, старые помогут вам потренироваться в начале), глубокая и обычная тарелка, вилки, ложки, нож, черпак, средства для мытья и чистки посуды, спички или зажигалка.\n\n'
+                            'Бытовая техника: электрический чайник, микроволновая печь, холодильник, мультиварка (все это лучше купить на месте, также это можно купить у выезжающих студентов, что будет выгоднее).\n',
+    MOVING_TO_THE_DORM[
+        V_ENGLISH].lower(): 'In the dormitory will need a lot of things, we can advise you what you will need 100%.\n\n'
+                            'Things to furnish your room: curtains, a bedside rug, a warm plaid, a rag to wipe off dust.\n\n'
+                            'Clothes: as much as you need for a month, the dormitory has a laundry room, some hangers, clothes for physical training. From outer clothing take autumn clothes, take winter clothes at first. They can be brought or sent later if suddenly bad weather comes, in St. Petersburg winters are not very cold (compared with Siberia).\n\n'
+                            'Footwear: it is advisable to take two pairs of "summer" and interseasonal shoes each, and don\'t forget to take a shoe dryer. Winter shoes can also be sent later. Sneakers will be needed for physical education classes. Dorm slippers/slippers and rubber slippers for showering are also needed.\n\n'
+                            'Hygiene and beauty supplies: shampoo, body gel, washcloth (if needed), soap, laundry detergent/gel (the machines in the laundry room need to be filled with their own detergent), toothbrush, toothpaste, toilet paper, beauty products, nail clippers, towels.\n\n'
+                            'First aid kit: pain reliever, remedies for stomach problems, bandages, bactericidal bandage, antiseptic ointment, medications you need, runny nose spray, cold and fever medications.\n\n'
+                            'Food: some tea or coffee, some sugar, ready-made food (cutlets, vegetables, etc.) which is enough for two meals (one snack while you\'re checking in and one for dinner).\n\n'
+                            'Electronic devices: laptop (you\'ll be carrying him to school and in order to laptop longer serve, have a bag for him), extension cords (outlets may be at a distance from the desk / bed, or they just won\'t be enough), the point of Internet access (at check in will need to sign a contract with an Internet company to connect the Internet, but the modem buy it yourself).\n\n'
+                            'Documents for moving into the dormitory: passport, a couple of photos 3*4, the results of fluorography, information about medical vaccinations.\n\n'
+                            'Kitchen utensils: saucepan, frying pan (don\'t buy new ones, the old ones will help you practice in the beginning), deep and plain plates, forks, spoons, knife, scoop, dishwashing and cleaning supplies, matches or a lighter.\n\n'
+                            'Home appliances: electric kettle, microwave oven, refrigerator, multicooker (all these things are better to buy on the spot, you can also buy them from visiting students, which will be more profitable).\n',
+    MOVING_TO_THE_DORM[V_CHINESE].lower(): '宿舍需要很多东西，我们可以向你建议100%需要的东西\n\n'
+                                              '装饰房间的东西：窗帘、床头地毯、温暖的格子布、擦拭灰尘的抹布。\n\n'
+                                              '衣服：一个月需要多少就有多少，宿舍有一个洗衣房，有几个衣架，体育课用的衣服。从外衣中取出秋天的衣服，冬天的一开始就取出。如果坏天气突然来临，他们可以稍后带来或发送，在圣彼得堡的冬天不是很冷（与西伯利亚相比）。\n\n'
+                                              '鞋类：最好带两双 "夏季 "和跨季的鞋子，别忘了带一个烘鞋器。冬鞋也可以稍后发送。需要穿上体育课的运动鞋。还需要有宿舍拖鞋/拖鞋和洗澡用的橡胶拖鞋。\n\n'
+                                              '卫生和美容用品：洗发水、沐浴露、毛巾（如果需要的话）、肥皂、洗衣粉/凝胶（洗衣房的机器需要自己装洗涤剂）、牙刷、牙膏、卫生纸、化妆品、指甲刀、毛巾。\n\n'
+                                              '急救箱：止痛药、治疗胃病的药、绷带、杀菌绷带、消毒药膏、你需要的药品、喷鼻剂、感冒和发烧药。\n\n'
+                                              '食物：一些茶或咖啡，一些糖，现成的饭菜（肉丸子、蔬菜等），足够两顿饭吃的（一份是入住前的点心，一份是晚餐）。\n\n'
+                                              '电子设备：笔记本电脑（你要带着他去学校，为了让笔记本电脑更长时间的服务，要给他准备一个包），延长线（插座可能离书桌或床有一定的距离，否则就是不够用），互联网接入点（在入住时需要和互联网公司签订合同，连接互联网，但路由器要自己买）。\n\n'
+                                              '入住宿舍的文件：护照、几张3*4的照片、透视检查结果、医疗疫苗接种信息。\n\n'
+                                              '厨房用具：汤锅、煎锅（不要买新的，旧的可以在开始时帮助你练习）、深色和普通的盘子、叉子、勺子、刀、勺子、洗涤和清洁用具、火柴或打火机\n\n'
+                                              '家用电器：电热水壶、微波炉、冰箱、多用电饭煲（这些东西最好是当场购买，也可以向离校的学生购买，这样会省一笔）\n',
 
     PAYMENT[
         V_RUSSIAN].lower(): 'Когда происходит поселение в общежитие, ты подписываешь договор о найме жилья, за которое необходимо платить около 1000 рублей в месяц. Цена зависит от количества человек в комнате, за «уплотнение» чуть меньше.\n'
@@ -854,22 +894,22 @@ gl_questions_answers = {
                                       '•	为确保宿舍内住户和工作人员的消防和公共安全。\n',
 
     BODIES_OF_MANAGEMENT[
-        V_RUSSIAN].lower(): 'В каждом общежитии проживающими избирается орган самоуправления – студенческий совет общежития. \n'
-                            'В каждом блоке общежития Студгородка избирается староста. Староста блока следит за бережным отношением проживающих к имуществу и оборудованию, организует и контролирует работы по содержанию блока в чистоте и порядке.\n'
-                            'Также в каждом общежитии избирается председатель Студсовета общежития. Председатель возглавляет Студсовет, занимается защитой прав студентов, а также ответственен за все мероприятия в общаге от Студсовета.\n'
-                            'Для координации работы во всех общежитиях Студгородка есть Объединенный студенческий совет общежитий, в состав которого включаются все председатели Студсоветов общежитий, представители профсоюзной организации студентов, других общественных студенческих организаций, администрации СПбПУ.\n'
+        V_RUSSIAN].lower(): 'В каждом общежитии проживающими избирается орган самоуправления – студенческий совет общежития. \n\n'
+                            'В каждом блоке общежития Студгородка избирается староста. Староста блока следит за бережным отношением проживающих к имуществу и оборудованию, организует и контролирует работы по содержанию блока в чистоте и порядке.\n\n'
+                            'Также в каждом общежитии избирается председатель Студсовета общежития. Председатель возглавляет Студсовет, занимается защитой прав студентов, а также ответственен за все мероприятия в общаге от Студсовета.\n\n'
+                            'Для координации работы во всех общежитиях Студгородка есть Объединенный студенческий совет общежитий, в состав которого включаются все председатели Студсоветов общежитий, представители профсоюзной организации студентов, других общественных студенческих организаций, администрации СПбПУ.\n\n'
                             'Студсовет совместно с администрацией общежития в пределах своих полномочий участвует в расселении студентов нового приема, распределении новой мебели и оборудования между проживающими, сохранность закрепленной жилой площади. \n',
     BODIES_OF_MANAGEMENT[
-        V_ENGLISH].lower(): 'In each dorm residents elect a body of self-government - the student council of the dormitory. \n'
-                            'Each dormitory unit elects a student warden. The Head of the block makes sure that the residents are careful with the property and equipment, organizes and supervises the maintenance of the block in a clean and orderly manner.\n'
-                            'Also each dormitory elects a Chair of the Dormitory Student Council. The Chairperson heads the Student Council, protects students\' rights, and is responsible for all activities in the dormitory from the Student Council.\n'
-                            'To coordinate the work in all dormitories of the campus, there is a Joint Student Council of dormitories, which includes all Chairmen of dormitory Student Councils, representatives of the students\' trade union organization, other public student organizations, and the administration of SPbPU.\n'
+        V_ENGLISH].lower(): 'In each dorm residents elect a body of self-government - the student council of the dormitory. \n\n'
+                            'Each dormitory unit elects a student warden. The Head of the block makes sure that the residents are careful with the property and equipment, organizes and supervises the maintenance of the block in a clean and orderly manner.\n\n'
+                            'Also each dormitory elects a Chair of the Dormitory Student Council. The Chairperson heads the Student Council, protects students\' rights, and is responsible for all activities in the dormitory from the Student Council.\n\n'
+                            'To coordinate the work in all dormitories of the campus, there is a Joint Student Council of dormitories, which includes all Chairmen of dormitory Student Councils, representatives of the students\' trade union organization, other public student organizations, and the administration of SPbPU.\n\n'
                             'The Student Council together with the administration of the dormitory within the limits of its authority participates in the settlement of students of the new admission, the distribution of new furniture and equipment among the residents, the preservation of the assigned living space. \n',
     BODIES_OF_MANAGEMENT[
-        V_CHINESE].lower(): '每个宿舍选出一个自治机构--宿舍的学生会。\n'
-                            '校园的每个宿舍区都会选出一名学生舍监。街区负责人确保居民认真对待财产和设备，组织和监督街区的清洁和有序的维护。\n'
-                            '另外，每个宿舍都会选出一名宿舍学生会主席。主席领导学生会，保护学生的权利，并负责学生会在宿舍的所有活动。\n'
-                            '为了协调校园内所有宿舍的工作，有一个宿舍联合学生会，其中包括所有宿舍学生会主席、学生工会组织的代表、其他公共学生组织、SPbPU的行政部门。\n'
+        V_CHINESE].lower(): '每个宿舍选出一个自治机构--宿舍的学生会。\n\n'
+                            '校园的每个宿舍区都会选出一名学生舍监。街区负责人确保居民认真对待财产和设备，组织和监督街区的清洁和有序的维护。\n\n'
+                            '另外，每个宿舍都会选出一名宿舍学生会主席。主席领导学生会，保护学生的权利，并负责学生会在宿舍的所有活动。\n\n'
+                            '为了协调校园内所有宿舍的工作，有一个宿舍联合学生会，其中包括所有宿舍学生会主席、学生工会组织的代表、其他公共学生组织、SPbPU的行政部门。\n\n'
                             '学生会与宿舍管理部门在其权限范围内共同参与新入学学生的安置工作，在住户中分配新的家具和设备，确保分配的生活空间的安全。\n',
 
     RESPONSIBILITY_BREAKING_RULES[V_RUSSIAN].lower(): 'За соблюдением правил следит администрация, студенческий '
@@ -885,30 +925,30 @@ gl_questions_answers = {
         V_CHINESE].lower(): '行政部门、学生会和校园安保部门负责监督该政策的遵守情况。经上述任何一个机构申请，可以要求学生作出解释，并适用纪律处分的方法之一：训斥、训诫、开除学籍。在这种情况下，如果学生受到三次训斥，将被自动开除学籍。',
 
     NEIGHBORS[
-        V_RUSSIAN].lower(): 'Взаимоотношения – сложная штука. Просто так нельзя расписать все тонкости, чтобы никогда не возникали конфликты. Но их можно свести к минимуму, что мы и поможем тебе сделать с помощью следующих советов.\n'
-                            'В первые месяцы жизни студенты закупают вещи в комнату. Многие покупают технику совместно с соседями. Но жизнь в общежитии на самом деле непредсказуема, вы можете переехать в другую комнату или общежитие.\n'
-                            'Поэтому советуем, чтобы каждый купит что-то в комнату сам. Тогда, если именно тебе необходим фен, утюг, мультиварка и т.д., то ты можешь пользоваться этим индивидуально или же делиться с соседями по комнате, если им вдруг понадобится. Также, при неожиданных ситуациях, вы сможете забрать технику себе или перепродать ее. Это поможет избежать конфликтов с соседями.\n'
+        V_RUSSIAN].lower(): 'Взаимоотношения – сложная штука. Просто так нельзя расписать все тонкости, чтобы никогда не возникали конфликты. Но их можно свести к минимуму, что мы и поможем тебе сделать с помощью следующих советов.\n\n'
+                            'В первые месяцы жизни студенты закупают вещи в комнату. Многие покупают технику совместно с соседями. Но жизнь в общежитии на самом деле непредсказуема, вы можете переехать в другую комнату или общежитие.\n\n'
+                            'Поэтому советуем, чтобы каждый купит что-то в комнату сам. Тогда, если именно тебе необходим фен, утюг, мультиварка и т.д., то ты можешь пользоваться этим индивидуально или же делиться с соседями по комнате, если им вдруг понадобится. Также, при неожиданных ситуациях, вы сможете забрать технику себе или перепродать ее. Это поможет избежать конфликтов с соседями.\n\n'
                             'Между соседями часто возникают конфликты при выполнении тех или иных обязанностей. Поэтому обрати внимание на следующие советы:\n'
                             '•	Составьте график уборки, определите последовательность и периодичность уборки. Решите, что будет входить в обязанности дежурного. Например, подмести и вымыть пол, вытереть пыль с бытовых приборов.\n'
-                            '•	Мусор необходимо выносить каждый день. Скопление в мусорном ведре пищевых отходов влечет за собой неприятный запах в комнате, а также появление тараканов. Договоритесь, кто за кем выносит мусор. Прикрепите на дверь график дежурств и выноса мусора. Это поможет соблюдать порядок и дисциплину в комнате.\n'
-                            'У каждого человека свои особенности питания. Поэтому важно уважать вкусовые предпочтения соседа, если даже он каждый вечер заваривает лапшу быстрого приготовления:)\n'
+                            '•	Мусор необходимо выносить каждый день. Скопление в мусорном ведре пищевых отходов влечет за собой неприятный запах в комнате, а также появление тараканов. Договоритесь, кто за кем выносит мусор. Прикрепите на дверь график дежурств и выноса мусора. Это поможет соблюдать порядок и дисциплину в комнате.\n\n'
+                            'У каждого человека свои особенности питания. Поэтому важно уважать вкусовые предпочтения соседа, если даже он каждый вечер заваривает лапшу быстрого приготовления:)\n\n'
                             'Многие в самом начале жизни в общаге стараются покупать продукты и готовить вместе. Но вскоре это становится неудобным из-за расписания или пожеланий в еде. Поэтому мы рекомендуем питаться отдельно, чтобы избежать конфликтов по поводу количества съеденного. Но никто не запрещает угощать соседей своим фирменным блюдом.\n',
     NEIGHBORS[
-        V_ENGLISH].lower(): 'Relationships are complicated things. You just can\'t spell out all the subtleties so that conflicts never arise. But they can be minimized, which we\'ll help you do with the following tips.\n'
-                            'In the first few months of life, students shop for things in their room. Many buy appliances jointly with their roommates. But dorm life is really unpredictable, you may move to another room or dorm.\n'
-                            'So it is advised that everyone buy something in the room on their own. Then, if you\'re the one who needs a hair dryer, iron, multicooker, etc., you can use it individually or you can share it with your roommates if they suddenly need it. Also, in case of unexpected situations, you will be able to take the appliances for yourself or resell them. This will help you avoid conflicts with your neighbors.\n'
+        V_ENGLISH].lower(): 'Relationships are complicated things. You just can\'t spell out all the subtleties so that conflicts never arise. But they can be minimized, which we\'ll help you do with the following tips.\n\n'
+                            'In the first few months of life, students shop for things in their room. Many buy appliances jointly with their roommates. But dorm life is really unpredictable, you may move to another room or dorm.\n\n'
+                            'So it is advised that everyone buy something in the room on their own. Then, if you\'re the one who needs a hair dryer, iron, multicooker, etc., you can use it individually or you can share it with your roommates if they suddenly need it. Also, in case of unexpected situations, you will be able to take the appliances for yourself or resell them. This will help you avoid conflicts with your neighbors.\n\n'
                             'There are often conflicts between roommates when performing certain duties. Therefore, pay attention to the following tips:\n'
                             '•	Make a cleaning schedule, determine the sequence and frequency of cleaning. Decide what will be part of the duties of the person on duty. For example, sweep and mop the floor, wipe dust off appliances.\n'
                             '•	Garbage must be taken out every day. The accumulation of food waste in the garbage can causes an unpleasant smell in the room, as well as the appearance of cockroaches. Agree on who takes out the garbage for whom. Put a schedule of duty and trash pickup on the door. This will help keep the room orderly and disciplined.\n'
-                            'Each person has different eating habits. So it is important to respect the taste preferences of your neighbor, even if he makes instant noodles every night:)\n'
+                            'Each person has different eating habits. So it is important to respect the taste preferences of your neighbor, even if he makes instant noodles every night:)\n\n'
                             'Many in the beginning of life in the dorm try to buy groceries and cook together. But soon it becomes inconvenient because of the schedule or food preferences. So we recommend eating separately to avoid conflicts over the amount eaten. But no one forbids treating your neighbors to your special meal.\n',
-    NEIGHBORS[V_CHINESE].lower(): '关系是复杂的事情。你就是不能把所有的微妙之处都说出来，这样就不会出现冲突。但它们可以被保持在最低限度，我们将通过以下提示帮助你做到这一点。\n'
-                                  '在生活的头几个月，学生们在自己的房间里买东西。许多人与室友一起购买电器。但宿舍生活真的是不可预测的，你可能会搬到另一个房间或宿舍。\n'
-                                  '所以我们建议大家在房间里自己买点东西。然后，如果你是那个需要吹风机、熨斗、多孔锅等的人，你可以单独使用，或者在你的室友突然需要时与他们分享。此外，如果出现意外情况，你将能够把电器据为己有或转卖。这将帮助你避免与你的室友发生冲突。\n'
+    NEIGHBORS[V_CHINESE].lower(): '关系是复杂的事情。你就是不能把所有的微妙之处都说出来，这样就不会出现冲突。但它们可以被保持在最低限度，我们将通过以下提示帮助你做到这一点。\n\n'
+                                  '在生活的头几个月，学生们在自己的房间里买东西。许多人与室友一起购买电器。但宿舍生活真的是不可预测的，你可能会搬到另一个房间或宿舍。\n\n'
+                                  '所以我们建议大家在房间里自己买点东西。然后，如果你是那个需要吹风机、熨斗、多孔锅等的人，你可以单独使用，或者在你的室友突然需要时与他们分享。此外，如果出现意外情况，你将能够把电器据为己有或转卖。这将帮助你避免与你的室友发生冲突。\n\n'
                                   '在履行某些职责时，室友之间经常会有冲突。因此，请注意以下提示。\n'
                                   '•	制定一个清洁时间表，确定清洁的顺序和频率。决定值班人员的职责是什么。例如，扫地和拖地，擦拭电器上的灰尘。\n'
-                                  '•	垃圾需要每天倒出。垃圾中的食物残渣堆积会导致房间里出现难闻的气味，也会出现蟑螂。就谁为谁倒垃圾达成一致。在门上贴上值班和捡拾垃圾的时间表。这将有助于保持房间的秩序和纪律。\n'
-                                  '每个人都有不同的饮食习惯。因此，必须尊重你的邻居的口味偏好，即使他每天晚上都做方便面:)\n'
+                                  '•	垃圾需要每天倒出。垃圾中的食物残渣堆积会导致房间里出现难闻的气味，也会出现蟑螂。就谁为谁倒垃圾达成一致。在门上贴上值班和捡拾垃圾的时间表。这将有助于保持房间的秩序和纪律。\n\n'
+                                  '每个人都有不同的饮食习惯。因此，必须尊重你的邻居的口味偏好，即使他每天晚上都做方便面:)\n\n'
                                   '许多人在宿舍生活的开始阶段，尝试着一起买菜和做饭。但很快就因为日程安排或食物偏好而变得不方便了。因此，我们建议分开吃，以避免在吃的数量上发生冲突。但是没有人禁止用你的特别餐来招待你的邻居。\n',
 
     ADMINISTRATION[
@@ -964,34 +1004,40 @@ gl_questions_answers = {
                                     '•	如果蟑螂在床头柜里，就把它完全拆开并进行处理。\n',
 
     WHAT_TO_TAKE_WITH_YOU[
-        V_RUSSIAN].lower(): 'В общежитии понадобиться большое количество вещей, можем вам посоветовать, что будет нужно 100%.\n'
-                            'Вещи для обустройства комнаты: шторы, прикроватный коврик, тёплый плед, тряпку для протирки пыли.\n'
-                            'Одежда: столько, сколько нужно на месяц, в общежитие есть прачечная, несколько вешалок, одежда для занятий физкультурой. Из верхней одежды возьмите осенние вещи, зимние в первое время берите. Их можно будет привести или переслать позже, если вдруг наступит плохая погода, в Санкт-Петербурге не очень холодные зимы (по сравнению с Сибирью).\n'
-                            'Обувь: желательно взять по две пары “летней” и межсезонной обуви, не забудьте взять сушилку для обуви. Зимнюю обувь также можно прислать позже. Потребуются кроссовки для занятий физкультурой. Также необходимы тапочки/шлепки для общаги и резиновые шлепки для похода в душ.\n'
-                            'Гигиенические и косметические средства: шампунь, гель для тела, мочалка (если нужна), мыло, порошок/гель для стирки (машинки в прачечной нужно засыпать своим средством), зубная щётка, зубная паста, туалетная бумага, косметические средства, ножницы для ногтей, полотенца.\n'
-                            'Аптечка: средство от боли, средства для решения проблем с животом, бинт, пластырь бактерицидный, мазь антисептическая, лекарства, которые тебе нужны, спрей от насморка, противопростудные и жаропонижающие препараты.\n'
-                            'Продукты: немного чая или кофе, немного сахара, готовая еда (котлеты, овощи и т.п.) которой хватит на 2 раза покушать (один раз перекусить пока будешь заселяться и один раз на ужин).\n'
-                            'Электронные приборы: ноутбук (ты будешь его носить на учебу и для того чтобы ноутбук дольше служил, заведи для него сумку), удлинители (розетки могут находиться на расстоянии от стола/кровати, либо их просто будет не хватать), точка доступа в интернет (при заселении нужно будет подписать договор с интернет компанией для подключения интернета, но модем покупать самим).\n'
-                            'Документы для заселения в общежитие: паспорт, парочку фотографий 3*4, результаты флюорографии, сведения о медицинских прививках.\n',
+        V_RUSSIAN].lower(): 'В общежитии понадобится большое количество вещей, можем вам посоветовать, что будет нужно 100%.\n\n'
+                            'Вещи для обустройства комнаты: шторы, прикроватный коврик, тёплый плед, тряпку для протирки пыли.\n\n'
+                            'Одежда: столько, сколько нужно на месяц, в общежитие есть прачечная, несколько вешалок, одежда для занятий физкультурой. Из верхней одежды возьмите осенние вещи, зимние в первое время берите. Их можно будет привести или переслать позже, если вдруг наступит плохая погода, в Санкт-Петербурге не очень холодные зимы (по сравнению с Сибирью).\n\n'
+                            'Обувь: желательно взять по две пары “летней” и межсезонной обуви, не забудьте взять сушилку для обуви. Зимнюю обувь также можно прислать позже. Потребуются кроссовки для занятий физкультурой. Также необходимы тапочки/шлепки для общаги и резиновые шлепки для похода в душ.\n\n'
+                            'Гигиенические и косметические средства: шампунь, гель для тела, мочалка (если нужна), мыло, порошок/гель для стирки (машинки в прачечной нужно засыпать своим средством), зубная щётка, зубная паста, туалетная бумага, косметические средства, ножницы для ногтей, полотенца.\n\n'
+                            'Аптечка: средство от боли, средства для решения проблем с животом, бинт, пластырь бактерицидный, мазь антисептическая, лекарства, которые тебе нужны, спрей от насморка, противопростудные и жаропонижающие препараты.\n\n'
+                            'Продукты: немного чая или кофе, немного сахара, готовая еда (котлеты, овощи и т.п.) которой хватит на 2 раза покушать (один раз перекусить пока будешь заселяться и один раз на ужин).\n\n'
+                            'Электронные приборы: ноутбук (ты будешь его носить на учебу и для того чтобы ноутбук дольше служил, заведи для него сумку), удлинители (розетки могут находиться на расстоянии от стола/кровати, либо их просто будет не хватать), точка доступа в интернет (при заселении нужно будет подписать договор с интернет компанией для подключения интернета, но модем покупать самим).\n\n'
+                            'Документы для заселения в общежитие: паспорт, парочку фотографий 3*4, результаты флюорографии, сведения о медицинских прививках.\n\n'
+                            'Кухонные принадлежности: кастрюля, сковорода (не покупайте новые, старые помогут вам потренироваться в начале), глубокая и обычная тарелка, вилки, ложки, нож, черпак, средства для мытья и чистки посуды, спички или зажигалка.\n\n'
+                            'Бытовая техника: электрический чайник, микроволновая печь, холодильник, мультиварка (все это лучше купить на месте, также это можно купить у выезжающих студентов, что будет выгоднее).\n',
     WHAT_TO_TAKE_WITH_YOU[
-        V_ENGLISH].lower(): 'In the dormitory will need a lot of things, we can advise you what you will need 100%.\n'
-                            'Things to furnish your room: curtains, a bedside rug, a warm plaid, a rag to wipe off dust.\n'
-                            'Clothes: as much as you need for a month, the dormitory has a laundry room, some hangers, clothes for physical training. From outer clothing take autumn clothes, take winter clothes at first. They can be brought or sent later if suddenly bad weather comes, in St. Petersburg winters are not very cold (compared with Siberia).\n'
-                            'Footwear: it is advisable to take two pairs of "summer" and interseasonal shoes each, and don\'t forget to take a shoe dryer. Winter shoes can also be sent later. Sneakers will be needed for physical education classes. Dorm slippers/slippers and rubber slippers for showering are also needed.\n'
-                            'Hygiene and beauty supplies: shampoo, body gel, washcloth (if needed), soap, laundry detergent/gel (the machines in the laundry room need to be filled with their own detergent), toothbrush, toothpaste, toilet paper, beauty products, nail clippers, towels.\n'
-                            'First aid kit: pain reliever, remedies for stomach problems, bandages, bactericidal bandage, antiseptic ointment, medications you need, runny nose spray, cold and fever medications.\n'
-                            'Food: some tea or coffee, some sugar, ready-made food (cutlets, vegetables, etc.) which is enough for two meals (one snack while you\'re checking in and one for dinner).\n'
-                            'Electronic devices: laptop (you\'ll be carrying him to school and in order to laptop longer serve, have a bag for him), extension cords (outlets may be at a distance from the desk / bed, or they just won\'t be enough), the point of Internet access (at check in will need to sign a contract with an Internet company to connect the Internet, but the modem buy it yourself).\n'
-                            'Documents for moving into the dormitory: passport, a couple of photos 3*4, the results of fluorography, information about medical vaccinations.\n',
-    WHAT_TO_TAKE_WITH_YOU[V_CHINESE].lower(): '宿舍需要很多东西，我们可以向你建议100%需要的东西\n'
-                                              '装饰房间的东西：窗帘、床头地毯、温暖的格子布、擦拭灰尘的抹布。\n'
-                                              '衣服：一个月需要多少就有多少，宿舍有一个洗衣房，有几个衣架，体育课用的衣服。从外衣中取出秋天的衣服，冬天的一开始就取出。如果坏天气突然来临，他们可以稍后带来或发送，在圣彼得堡的冬天不是很冷（与西伯利亚相比）。\n'
-                                              '鞋类：最好带两双 "夏季 "和跨季的鞋子，别忘了带一个烘鞋器。冬鞋也可以稍后发送。需要穿上体育课的运动鞋。还需要有宿舍拖鞋/拖鞋和洗澡用的橡胶拖鞋。\n'
-                                              '卫生和美容用品：洗发水、沐浴露、毛巾（如果需要的话）、肥皂、洗衣粉/凝胶（洗衣房的机器需要自己装洗涤剂）、牙刷、牙膏、卫生纸、化妆品、指甲刀、毛巾。\n'
-                                              '急救箱：止痛药、治疗胃病的药、绷带、杀菌绷带、消毒药膏、你需要的药品、喷鼻剂、感冒和发烧药。\n'
-                                              '食物：一些茶或咖啡，一些糖，现成的饭菜（肉丸子、蔬菜等），足够两顿饭吃的（一份是入住前的点心，一份是晚餐）。\n'
-                                              '电子设备：笔记本电脑（你要带着他去学校，为了让笔记本电脑更长时间的服务，要给他准备一个包），延长线（插座可能离书桌或床有一定的距离，否则就是不够用），互联网接入点（在入住时需要和互联网公司签订合同，连接互联网，但路由器要自己买）。\n'
-                                              '入住宿舍的文件：护照、几张3*4的照片、透视检查结果、医疗疫苗接种信息。\n',
+        V_ENGLISH].lower(): 'In the dormitory will need a lot of things, we can advise you what you will need 100%.\n\n'
+                            'Things to furnish your room: curtains, a bedside rug, a warm plaid, a rag to wipe off dust.\n\n'
+                            'Clothes: as much as you need for a month, the dormitory has a laundry room, some hangers, clothes for physical training. From outer clothing take autumn clothes, take winter clothes at first. They can be brought or sent later if suddenly bad weather comes, in St. Petersburg winters are not very cold (compared with Siberia).\n\n'
+                            'Footwear: it is advisable to take two pairs of "summer" and interseasonal shoes each, and don\'t forget to take a shoe dryer. Winter shoes can also be sent later. Sneakers will be needed for physical education classes. Dorm slippers/slippers and rubber slippers for showering are also needed.\n\n'
+                            'Hygiene and beauty supplies: shampoo, body gel, washcloth (if needed), soap, laundry detergent/gel (the machines in the laundry room need to be filled with their own detergent), toothbrush, toothpaste, toilet paper, beauty products, nail clippers, towels.\n\n'
+                            'First aid kit: pain reliever, remedies for stomach problems, bandages, bactericidal bandage, antiseptic ointment, medications you need, runny nose spray, cold and fever medications.\n\n'
+                            'Food: some tea or coffee, some sugar, ready-made food (cutlets, vegetables, etc.) which is enough for two meals (one snack while you\'re checking in and one for dinner).\n\n'
+                            'Electronic devices: laptop (you\'ll be carrying him to school and in order to laptop longer serve, have a bag for him), extension cords (outlets may be at a distance from the desk / bed, or they just won\'t be enough), the point of Internet access (at check in will need to sign a contract with an Internet company to connect the Internet, but the modem buy it yourself).\n\n'
+                            'Documents for moving into the dormitory: passport, a couple of photos 3*4, the results of fluorography, information about medical vaccinations.\n\n'
+                            'Kitchen utensils: saucepan, frying pan (don\'t buy new ones, the old ones will help you practice in the beginning), deep and plain plates, forks, spoons, knife, scoop, dishwashing and cleaning supplies, matches or a lighter.\n\n'
+                            'Home appliances: electric kettle, microwave oven, refrigerator, multicooker (all these things are better to buy on the spot, you can also buy them from visiting students, which will be more profitable).\n',
+    WHAT_TO_TAKE_WITH_YOU[V_CHINESE].lower(): '宿舍需要很多东西，我们可以向你建议100%需要的东西\n\n'
+                                              '装饰房间的东西：窗帘、床头地毯、温暖的格子布、擦拭灰尘的抹布。\n\n'
+                                              '衣服：一个月需要多少就有多少，宿舍有一个洗衣房，有几个衣架，体育课用的衣服。从外衣中取出秋天的衣服，冬天的一开始就取出。如果坏天气突然来临，他们可以稍后带来或发送，在圣彼得堡的冬天不是很冷（与西伯利亚相比）。\n\n'
+                                              '鞋类：最好带两双 "夏季 "和跨季的鞋子，别忘了带一个烘鞋器。冬鞋也可以稍后发送。需要穿上体育课的运动鞋。还需要有宿舍拖鞋/拖鞋和洗澡用的橡胶拖鞋。\n\n'
+                                              '卫生和美容用品：洗发水、沐浴露、毛巾（如果需要的话）、肥皂、洗衣粉/凝胶（洗衣房的机器需要自己装洗涤剂）、牙刷、牙膏、卫生纸、化妆品、指甲刀、毛巾。\n\n'
+                                              '急救箱：止痛药、治疗胃病的药、绷带、杀菌绷带、消毒药膏、你需要的药品、喷鼻剂、感冒和发烧药。\n\n'
+                                              '食物：一些茶或咖啡，一些糖，现成的饭菜（肉丸子、蔬菜等），足够两顿饭吃的（一份是入住前的点心，一份是晚餐）。\n\n'
+                                              '电子设备：笔记本电脑（你要带着他去学校，为了让笔记本电脑更长时间的服务，要给他准备一个包），延长线（插座可能离书桌或床有一定的距离，否则就是不够用），互联网接入点（在入住时需要和互联网公司签订合同，连接互联网，但路由器要自己买）。\n\n'
+                                              '入住宿舍的文件：护照、几张3*4的照片、透视检查结果、医疗疫苗接种信息。\n\n'
+                                              '厨房用具：汤锅、煎锅（不要买新的，旧的可以在开始时帮助你练习）、深色和普通的盘子、叉子、勺子、刀、勺子、洗涤和清洁用具、火柴或打火机\n\n'
+                                              '家用电器：电热水壶、微波炉、冰箱、多用电饭煲（这些东西最好是当场购买，也可以向离校的学生购买，这样会省一笔）\n',
 
     WHAT_TO_BUY_LOCALLY[
         V_RUSSIAN].lower(): 'Кухонные принадлежности: кастрюля, сковорода (не покупайте новые, старые помогут вам потренироваться в начале), глубокая и обычная тарелка, вилки, ложки, нож, черпак, средства для мытья и чистки посуды, спички или зажигалка.\n'

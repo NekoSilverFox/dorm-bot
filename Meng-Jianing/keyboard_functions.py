@@ -20,6 +20,11 @@ SET_LANGUAGE = ('русский', 'russian', 'russia', '俄语',
                 '中文', 'chinese', 'китайский', 'китайский язык',
                 'язык', '设置语言')
 
+WEBSITE_SPBSTU_HOSTEL = 'https://www.spbstu.ru/students/social-security/hostel/'
+WEBSITE_VK = 'https://vk.com/studg'
+WEBSITE_TEST = 'https://foxthere.com/spbstu/'
+
+
 to_change_language = [CHANGE_LANGUAGE[Language.RUSSIAN.value].lower(),
                       CHANGE_LANGUAGE[Language.ENGLISH.value].lower(),
                       CHANGE_LANGUAGE[Language.CHINESE.value].lower(),
@@ -109,10 +114,10 @@ def create_keyboard(keyword, is_one_time=False, is_inline=False, language=Langua
     elif keyword in to_scheme_1_1:
         # [ATTENTION] on first row ONLY can put 2 button!
         keyboard = VkKeyboard(one_time=is_one_time, inline=is_inline)
-        keyboard.add_openlink_button(WEBSITE[language], 'https://www.spbstu.ru/students/social-security/hostel/')
-        keyboard.add_openlink_button(VK[language], 'https://vk.com/studg')
+        keyboard.add_openlink_button(WEBSITE[language], WEBSITE_SPBSTU_HOSTEL)
+        keyboard.add_openlink_button(VK[language], WEBSITE_VK)
         keyboard.add_line()
-        keyboard.add_openlink_button(ONLINE_COURSE[language], 'https://foxthere.com/spbstu/')
+        # keyboard.add_openlink_button(ONLINE_COURSE[language], WEBSITE_TEST)
         keyboard.add_button(CLUB[language], color=VkKeyboardColor.PRIMARY)
         keyboard.add_line()
         keyboard.add_button(CHANGE_LANGUAGE[language], color=VkKeyboardColor.POSITIVE)
@@ -138,7 +143,7 @@ def create_keyboard(keyword, is_one_time=False, is_inline=False, language=Langua
         keyboard.add_line()
         keyboard.add_button(INTERNAL_REGULATIONS[language], color=VkKeyboardColor.PRIMARY)
         keyboard.add_line()
-        # keyboard.add_button(FRONT[language], color=VkKeyboardColor.NEGATIVE)  # TODO
+        # keyboard.add_button(FRONT[language], color=VkKeyboardColor.NEGATIVE)
         # keyboard.add_button(TO_THE_BEGINING[language], color=VkKeyboardColor.NEGATIVE)
         # keyboard.add_button(CHANGE_LANGUAGE[language], color=VkKeyboardColor.POSITIVE)
 
@@ -239,11 +244,11 @@ def create_keyboard(keyword, is_one_time=False, is_inline=False, language=Langua
         keyboard.add_button(COCKROACHES[language], color=VkKeyboardColor.PRIMARY)
 
     # Переезд в общежитие -->
-    elif keyword in to_moving_into_dorm:
-        keyboard = VkKeyboard(inline=True)
-        keyboard.add_button(WHAT_TO_TAKE_WITH_YOU[language], color=VkKeyboardColor.PRIMARY)
-        keyboard.add_line()
-        keyboard.add_button(WHAT_TO_BUY_LOCALLY[language], color=VkKeyboardColor.PRIMARY)
+    # elif keyword in to_moving_into_dorm:
+    #     keyboard = VkKeyboard(inline=True)
+    #     keyboard.add_button(WHAT_TO_TAKE_WITH_YOU[language], color=VkKeyboardColor.PRIMARY)
+    #     keyboard.add_line()
+    #     keyboard.add_button(WHAT_TO_BUY_LOCALLY[language], color=VkKeyboardColor.PRIMARY)
 
     # 关键字未匹配成功 - Ключевое слово не совпало
     else:
