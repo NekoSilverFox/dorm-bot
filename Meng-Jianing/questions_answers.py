@@ -69,9 +69,6 @@ COCKROACHES = ('Тараканами', 'Cockroaches', '除蟑螂')
 WHAT_TO_TAKE_WITH_YOU = ('Что взять с собой', 'What to take with you', '随身带什么')
 WHAT_TO_BUY_LOCALLY = ('Что купить на месте', 'What to buy locally', '需要购买的物品')
 
-
-
-
 # 键值对 <--> 问题（小写）和回答
 # Пары ключ-значение <--> вопрос (НИЖНИЙ регистр) и ответ
 # Attention! Questions should be in all lowercase!
@@ -110,13 +107,13 @@ gl_questions_answers = {
     MANAGEMENT_CONTACTS[V_ENGLISH].lower(): 'Campus Director – Шнейдер Анатолий Альбертович:\n'
                                             '•	uprstg@spbstu.ru\n'
                                             '•	+7 (812) 290-95-02\n'
-                                            '•	pl. Nepokoryonye, d.8, build.2, dorm. №14б\n\n'
+                                            '•	пр. Непокорённых, д.8, корп.2, общ. №14б\n\n'
                                             'City Student Accommodation Service:\n'
                                             '•	+7 (981) 805-32-40',
     MANAGEMENT_CONTACTS[V_CHINESE].lower(): '校园主任 – Шнейдер Анатолий Альбертович:\n'
                                             '•	uprstg@spbstu.ru\n'
                                             '•	+7 (812) 290-95-02\n'
-                                            '•	pl. Nepokoryonye, 街道号:8, 2号楼, 宿舍№14б\n\n'
+                                            '•	пр. Непокорённых, д.8, корп.2, общ. №14б\n\n'
                                             ' 城市学生住宿服务:\n'
                                             '•	+7 (981) 805-32-40',
 
@@ -153,10 +150,10 @@ gl_questions_answers = {
                                         '•	Лесной пр., д.67, корп.2, общ.№7',
     LESNOY_PROSPECT[V_ENGLISH].lower(): 'Chief of complex - Ядрышников Александр Аркадьевич:\n'
                                         '•	aayadrishnikov@spbstu.ru\n'
-                                        '•	Lesnoy pl., d.67, build.2, dorm.№7',
+                                        '•	Лесной пр., д.67, корп.2, общ.№7',
     LESNOY_PROSPECT[V_CHINESE].lower(): '复杂事务主管 - Ядрышников Александр Аркадьевич:\n'
                                         '•	aayadrishnikov@spbstu.ru\n'
-                                        '•	森林大街, 67号, 2号楼, 宿舍№7',
+                                        '•	Лесной пр., д.67, корп.2, общ.№7',
 
     COURAGE_SQUARE[V_RUSSIAN].lower(): 'Начальник комплекса - Короткова Руфина Рауфовна:\n'
                                        '•	rrkorotkova@spbstu.ru\n'
@@ -165,11 +162,11 @@ gl_questions_answers = {
     COURAGE_SQUARE[V_ENGLISH].lower(): 'Chief of complex - Короткова Руфина Рауфовна:\n'
                                        '•	rrkorotkova@spbstu.ru\n'
                                        '•	+7 (812) 290-97-12\n'
-                                       '•	pl. Nepokornykh, d.8, build.2, dorm.№14б\n',
+                                       '•	пр. Непокорённых, д.8, корп.2, общ. №14б\n',
     COURAGE_SQUARE[V_CHINESE].lower(): '复杂事务主管 - Короткова Руфина Рауфовна:\n'
                                        '•	rrkorotkova@spbstu.ru\n'
                                        '•	+7 (812) 290-97-12\n'
-                                       '•	Nepokornykh街, 8号, 2号楼, 宿舍№14б\n',
+                                       '•	пр. Непокорённых, д.8, корп.2, общ. №14б\n',
 
     CIVIL_PROSPECT[V_RUSSIAN].lower(): 'Начальник комплекса - Никулин Алексей Николаевич:\n'
                                        '•	nikulin@spbstu.ru\n'
@@ -178,11 +175,11 @@ gl_questions_answers = {
     CIVIL_PROSPECT[V_ENGLISH].lower(): 'Chief of complex - Никулин Алексей Николаевич:\n'
                                        '•	nikulin@spbstu.ru\n'
                                        '•	+7 (812) 322-01-38\n'
-                                       '•	Grazhdansky Ave., d.28, office 114\n',
+                                       '•	Гражданский пр., д.28, кабинет 114\n',
     CIVIL_PROSPECT[V_CHINESE].lower(): '复杂事务主管 - Никулин Алексей Николаевич:\n'
                                        '•	nikulin@spbstu.ru\n'
                                        '•	+7 (812) 322-01-38\n'
-                                       '•	公民大街, 28号, 114办公室\n',
+                                       '•	Гражданский пр., д.28, кабинет 114\n',
 
     SCIENCE_POLYTECH[V_RUSSIAN].lower(): 'Дирекция:\n'
                                          '•	+7 (812) 553-00-00\n'
@@ -210,21 +207,21 @@ gl_questions_answers = {
     SCIENCE_POLYTECH[V_ENGLISH].lower(): 'Directorate:\n'
                                          '•	+7 (812) 553-00-00\n'
                                          '•	+7 (812) 293-84-55\n'
-                                         '•	avenue. 65 Engelsa House, Letter A\n\n'
+                                         '•	пр. Энгельса, дом 65, литера А\n\n'
                                          'Head - Murtazina Marina Vyacheslavovna\n'
                                          'Complex of additional services for residents\n'
                                          'Chief of complex - Рублева Юлия Аркадьевна:\n'
                                          '•	rubleva@spbstu.ru\n'
                                          '•	+7 (812) 534-13-68\n'
                                          '•	+7 (812) 606-62-38\n'
-                                         '•	28 Grazhdansky Ave., office 104\n\n'
+                                         '•	Гражданский пр., д. 28, кабинет 104\n\n'
                                          'Senior Complex Administrator - Белаш Лилия Анатольевна:\n'
                                          '•	hotel@spbstu.ru\n'
                                          '•	+7 (812) 534-13-68\n'
-                                         '•	 Grazhdansky Ave. 28\n\n'
+                                         '•	пр. Гражданский, д. 28\n\n'
                                          'Evening and weekend room reservations phone numbers:\n'
-                                         '•	+7 (812) 321-61-00 (Grazhdansky Ave. 28)\n'
-                                         '•	+7 (812) 295-36-37 (Lesnoy Ave. 65/1 and 67/2)\n\n'
+                                         '•	+7 (812) 321-61-00 (Гражданский пр., д.28)\n'
+                                         '•	+7 (812) 295-36-37 (Лесной пр., д.65/1 и д.67/2)\n\n'
                                          'Superior rooms in dormitories:\n'
                                          '•	№1 emergency phone: +7 (812) 295-36-37\n'
                                          '•	№7 emergency phone: +7 (921) 561-13-29\n'
@@ -233,21 +230,21 @@ gl_questions_answers = {
     SCIENCE_POLYTECH[V_CHINESE].lower(): '管理局:\n'
                                          '•	+7 (812) 553-00-00\n'
                                          '•	+7 (812) 293-84-55\n'
-                                         '•	大道 65 Engelsa Str., Letter A\n\n'
+                                         '•	пр. Энгельса, дом 65, литера А\n\n'
                                          '经理 - Муртазина Марина Вячеславовна\n'
                                          '额外的居民服务配套\n'
                                          '复杂事务主任 - Рублева Юлия Аркадьевна:\n'
                                          '•	rubleva@spbstu.ru\n'
                                          '•	+7 (812) 534-13-68\n'
                                          '•	+7 (812) 606-62-38\n'
-                                         '•	公民大街, 28号, 办公室104\n\n'
+                                         '•	Гражданский пр., д. 28, кабинет 104\n\n'
                                          '综合楼高级管理员 - Белаш Лилия Анатольевна:\n'
                                          '•	hotel@spbstu.ru\n'
                                          '•	+7 (812) 534-13-68\n'
-                                         '•	公民大街, 28号\n\n'
+                                         '•	пр. Гражданский, д. 28\n\n'
                                          '晚上和周末的房间预订电话:\n'
-                                         '•	+7 (812) 321-61-00 (公民大街, 28号)\n'
-                                         '•	+7 (812) 295-36-37 (森林大街, 65/1号 和 67/2号)\n\n'
+                                         '•	+7 (812) 321-61-00 (Гражданский пр., д.28)\n'
+                                         '•	+7 (812) 295-36-37 (Лесной пр., д.65/1 и д.67/2)\n\n'
                                          '宿舍的高级客房:\n'
                                          '•	№1 紧急电话: +7 (812) 295-36-37\n'
                                          '•	№7 紧急电话: +7 (921) 561-13-29\n'
@@ -275,14 +272,14 @@ gl_questions_answers = {
                                                       '•	rubleva@spbstu.ru\n'
                                                       '•	+7 (812) 534-13-68\n'
                                                       '•	+7 (812) 606-62-38\n'
-                                                      '•	Office 104, 28 Grazhdansky Ave.\n'
+                                                      '•	Гражданский пр., д. 28, кабинет 104\n'
                                                       'Senior administrator of the complex - Белаш Лилия Анатольевна:\n'
                                                       '•	hotel@spbstu.ru\n'
                                                       '•	+7 (812) 534-13-68\n'
-                                                      '•	28 Grazhdansky Ave. 28, Grazhdansky Ave.\n'
+                                                      '•	пр. Гражданский, д. 28\n'
                                                       'Evening and weekend room reservation phones:\n'
-                                                      '•	+7 (812) 321-61-00 (28 Grazhdansky pr.)\n'
-                                                      '•	+7 (812) 295-36-37 (65/1 Lesnoy pr. and 67/2 Lesnoy pr.)\n'
+                                                      '•	+7 (812) 321-61-00 (Гражданский пр., д.28)\n'
+                                                      '•	+7 (812) 295-36-37 (Лесной пр., д.65/1 и д.67/2)\n'
                                                       'Superior rooms in the dormitories:\n'
                                                       '•	№1  phone on duty: +7 (812) 295-36-37\n'
                                                       '•	№7  phone on duty: +7 (921) 561-13-29\n'
@@ -292,14 +289,14 @@ gl_questions_answers = {
                                                       '•	rubleva@spbstu.ru\n'
                                                       '•	+7 (812) 534-13-68\n'
                                                       '•	+7 (812) 606-62-38\n'
-                                                      '•	公民大街, 28号, 104办公室\n'
+                                                      '•	Гражданский пр., д. 28, кабинет 104\n'
                                                       '高级管理员 - Белаш Лилия Анатольевна:\n'
                                                       '•	hotel@spbstu.ru\n'
                                                       '•	+7 (812) 534-13-68\n'
-                                                      '•	公民大街, 28号\n'
+                                                      '•	пр. Гражданский, д. 28\n'
                                                       '晚间和周末房间预订电话:\n'
-                                                      '•	+7 (812) 321-61-00 (公民大街, 28号)\n'
-                                                      '•	+7 (812) 295-36-37 (森林大街, 65/1号 和 67/2号)\n'
+                                                      '•	+7 (812) 321-61-00 (Гражданский пр., д.28)\n'
+                                                      '•	+7 (812) 295-36-37 (Лесной пр., д.65/1 и д.67/2)\n'
                                                       '旅舍的高级房间:\n'
                                                       '•	№1 值班电话: +7 (812) 295-36-37\n'
                                                       '•	№7 值班电话: +7 (921) 561-13-29\n'
@@ -339,16 +336,16 @@ gl_questions_answers = {
                             'Kitchen utensils: saucepan, frying pan (don\'t buy new ones, the old ones will help you practice in the beginning), deep and plain plates, forks, spoons, knife, scoop, dishwashing and cleaning supplies, matches or a lighter.\n\n'
                             'Home appliances: electric kettle, microwave oven, refrigerator, multicooker (all these things are better to buy on the spot, you can also buy them from visiting students, which will be more profitable).\n',
     MOVING_TO_THE_DORM[V_CHINESE].lower(): '宿舍需要很多东西，我们可以向你建议100%需要的东西\n\n'
-                                              '装饰房间的东西：窗帘、床头地毯、温暖的格子布、擦拭灰尘的抹布。\n\n'
-                                              '衣服：一个月需要多少就有多少，宿舍有一个洗衣房，有几个衣架，体育课用的衣服。从外衣中取出秋天的衣服，冬天的一开始就取出。如果坏天气突然来临，他们可以稍后带来或发送，在圣彼得堡的冬天不是很冷（与西伯利亚相比）。\n\n'
-                                              '鞋类：最好带两双 "夏季 "和跨季的鞋子，别忘了带一个烘鞋器。冬鞋也可以稍后发送。需要穿上体育课的运动鞋。还需要有宿舍拖鞋/拖鞋和洗澡用的橡胶拖鞋。\n\n'
-                                              '卫生和美容用品：洗发水、沐浴露、毛巾（如果需要的话）、肥皂、洗衣粉/凝胶（洗衣房的机器需要自己装洗涤剂）、牙刷、牙膏、卫生纸、化妆品、指甲刀、毛巾。\n\n'
-                                              '急救箱：止痛药、治疗胃病的药、绷带、杀菌绷带、消毒药膏、你需要的药品、喷鼻剂、感冒和发烧药。\n\n'
-                                              '食物：一些茶或咖啡，一些糖，现成的饭菜（肉丸子、蔬菜等），足够两顿饭吃的（一份是入住前的点心，一份是晚餐）。\n\n'
-                                              '电子设备：笔记本电脑（你要带着他去学校，为了让笔记本电脑更长时间的服务，要给他准备一个包），延长线（插座可能离书桌或床有一定的距离，否则就是不够用），互联网接入点（在入住时需要和互联网公司签订合同，连接互联网，但路由器要自己买）。\n\n'
-                                              '入住宿舍的文件：护照、几张3*4的照片、透视检查结果、医疗疫苗接种信息。\n\n'
-                                              '厨房用具：汤锅、煎锅（不要买新的，旧的可以在开始时帮助你练习）、深色和普通的盘子、叉子、勺子、刀、勺子、洗涤和清洁用具、火柴或打火机\n\n'
-                                              '家用电器：电热水壶、微波炉、冰箱、多用电饭煲（这些东西最好是当场购买，也可以向离校的学生购买，这样会省一笔）\n',
+                                           '装饰房间的东西：窗帘、床头地毯、温暖的格子布、擦拭灰尘的抹布。\n\n'
+                                           '衣服：一个月需要多少就有多少，宿舍有一个洗衣房，有几个衣架，体育课用的衣服。从外衣中取出秋天的衣服，冬天的一开始就取出。如果坏天气突然来临，他们可以稍后带来或发送，在圣彼得堡的冬天不是很冷（与西伯利亚相比）。\n\n'
+                                           '鞋类：最好带两双 "夏季 "和跨季的鞋子，别忘了带一个烘鞋器。冬鞋也可以稍后发送。需要穿上体育课的运动鞋。还需要有宿舍拖鞋/拖鞋和洗澡用的橡胶拖鞋。\n\n'
+                                           '卫生和美容用品：洗发水、沐浴露、毛巾（如果需要的话）、肥皂、洗衣粉/凝胶（洗衣房的机器需要自己装洗涤剂）、牙刷、牙膏、卫生纸、化妆品、指甲刀、毛巾。\n\n'
+                                           '急救箱：止痛药、治疗胃病的药、绷带、杀菌绷带、消毒药膏、你需要的药品、喷鼻剂、感冒和发烧药。\n\n'
+                                           '食物：一些茶或咖啡，一些糖，现成的饭菜（肉丸子、蔬菜等），足够两顿饭吃的（一份是入住前的点心，一份是晚餐）。\n\n'
+                                           '电子设备：笔记本电脑（你要带着他去学校，为了让笔记本电脑更长时间的服务，要给他准备一个包），延长线（插座可能离书桌或床有一定的距离，否则就是不够用），互联网接入点（在入住时需要和互联网公司签订合同，连接互联网，但路由器要自己买）。\n\n'
+                                           '入住宿舍的文件：护照、几张3*4的照片、透视检查结果、医疗疫苗接种信息。\n\n'
+                                           '厨房用具：汤锅、煎锅（不要买新的，旧的可以在开始时帮助你练习）、深色和普通的盘子、叉子、勺子、刀、勺子、洗涤和清洁用具、火柴或打火机\n\n'
+                                           '家用电器：电热水壶、微波炉、冰箱、多用电饭煲（这些东西最好是当场购买，也可以向离校的学生购买，这样会省一笔）\n',
 
     PAYMENT[
         V_RUSSIAN].lower(): 'Когда происходит поселение в общежитие, ты подписываешь договор о найме жилья, за которое необходимо платить около 1000 рублей в месяц. Цена зависит от количества человек в комнате, за «уплотнение» чуть меньше.\n'
@@ -467,97 +464,97 @@ gl_questions_answers = {
                                            '•	dorm1@spbstu.ru\n'
                                            '•	+7 (812) 775 05 30 #1444\n'
                                            '•	+7 (812) 775 05 30 #1445\n'
-                                           '•	Lesnoy pr., д. 65, build.1\n'
+                                           '•	Лесной пр., д. 65, корп.1\n'
                                            'Group on VKontakte – vk.com/spbstu_1\n'
                                            'Head of the hostel – Шевченко Ольга Николаевна',
     DORM_SHORT[V_ENGLISH].lower() + ' №3': 'Directorate:\n'
                                            '•	dorm3@spbstu.ru\n'
                                            '•	+7 (812) 775 05 30 #1448\n'
-                                           '•	Lesnoy pr., д. 65, build. 3\n'
+                                           '•	Лесной пр., д. 65, корп. 3\n'
                                            'Group on VKontakte – vk.com/spbstu_3\n'
                                            'Head of the hostel – Киреева Наталья Викторовна',
     DORM_SHORT[V_ENGLISH].lower() + ' №4': 'Directorate:\n'
                                            '•	dorm4@spbstu.ru\n'
                                            '•	+7 (812) 775 05 30 #1451\n'
-                                           '•	st. Pargolovskaya, д.11, build.1\n'
+                                           '•	ул. Парголовская, д.11, корп.1\n'
                                            'Group on VKontakte – vk.com/spbstu_4\n'
                                            'Head of the hostel – Мартынова Лариса Яковлевна',
     DORM_SHORT[V_ENGLISH].lower() + ' №4а': 'Directorate:\n'
                                             '•	dorm4a@spbstu.ru\n'
                                             '•	+7 (812) 775 05 30 #1453\n'
-                                            '•	st. Pargolovskaya, д.11, build.1\n'
+                                            '•	ул. Парголовская, д.11, корп.1\n'
                                             'Group on VKontakte – vk.com/spbstu_4aa\n'
                                             'Head of the hostel – Гst.ва Ирианда Анатольевна\n',
     DORM_SHORT[V_ENGLISH].lower() + ' №5': 'Directorate:\n'
                                            '•	dorm5@spbstu.ru\n'
                                            '•	+7 (812) 295-47-25\n'
-                                           '•	st. Pargolovskaya, д.11, build.2\n'
+                                           '•	ул. Парголовская, д.11, корп.2\n'
                                            'Group on VKontakte – vk.com/spbstu_5a | vk.com/spbstu_5b\n'
                                            'Head of the hostel – Мартьянова Милена Леонидовна\n',
     DORM_SHORT[V_ENGLISH].lower() + ' №6': 'Directorate:\n'
                                            '•	dorm6m@spbstu.ru\n'
                                            '•	+7 (812) 295-27-50\n'
-                                           '•	st. Kharchenko, д. 16\n'
+                                           '•	ул. Харченко, д. 16\n'
                                            'Group on VKontakte – vk.com/spbstu_6\n'
                                            'Head of the hostel – Егорова Ольга Адамовна\n',
     DORM_SHORT[V_ENGLISH].lower() + ' №7': 'Directorate:\n'
                                            '•	dorm7@spbstu.ru\n'
                                            '•	+7 (812) 775-05-30 #1442\n'
                                            '•	+7 (812) 775-05-30 #1443\n'
-                                           '•	Lesnoy pr., д.67, build.2\n'
+                                           '•	Лесной пр., д.67, корп.2\n'
                                            'Head of the hostel – Кривошея Гst.нара Куртвелиевна\n',
     DORM_SHORT[V_ENGLISH].lower() + ' №8': 'Directorate:\n'
                                            '•	dorm8@spbstu.ru\n'
                                            '•	+7 (812) 297-43-50\n'
-                                           '•	st. Khlopin, д.9, build.2\n'
+                                           '•	ул. Хлопина, д.9, корп.2\n'
                                            'Group on VKontakte – vk.com/spbstu_8\n'
                                            'Head of the hostel – Бернанс Ольга Ивановна\n',
     DORM_SHORT[V_ENGLISH].lower() + ' №10': 'Directorate:\n'
                                             '•	dorm10@spbstu.ru\n'
                                             '•	+7 (812) 297-16-78\n'
-                                            '•	pl. Nepokopolychnye, д. 6, build.2\n'
+                                            '•	пр. Непокоренных, д. 6, корп.2\n'
                                             'Group on VKontakte – vk.com/spbstu_10\n'
                                             'Head of the hostel – Текучева Елена Ивановна\n',
     DORM_SHORT[V_ENGLISH].lower() + ' №11': 'Directorate:\n'
                                             '•	dorm11@spbstu.ru\n'
                                             '•	+7 (812) 295-00-28\n'
-                                            '•	st. Kantemirovskaya, д. 24\n'
+                                            '•	ул. Кантемировская, д. 24\n'
                                             'Group on VKontakte – vk.com/spbstu_11\n'
                                             'Head of the hostel – Медведева Людмила Алексеевна\n',
     DORM_SHORT[V_ENGLISH].lower() + ' №12': 'Directorate:\n'
                                             '•	dorm12@spbstu.ru\n'
                                             '•	+7 (812) 534-47-86\n'
-                                            '•	st. Khlopin, д. 13, build. 1\n'
+                                            '•	ул. Хлопина, д. 13, корп. 1\n'
                                             'Group on VKontakte – vk.com/spbstu_12\n'
                                             'Head of the hostel – Пескова Ирина Викторовна\n',
     DORM_SHORT[V_ENGLISH].lower() + ' №14а': 'Directorate:\n'
                                              '•	dorm14a@spbstu.ru\n'
                                              '•	+7 (812) 596-26-67\n'
-                                             '•	pl. Nepokobornye, д. 8, build.2\n'
+                                             '•	пр. Непокоренных, д. 8, корп.2\n'
                                              'Group on VKontakte – vk.com/spbstu__14a\n'
                                              'Head of the hostel – Константинова Лариса Юрьевна\n',
     DORM_SHORT[V_ENGLISH].lower() + ' №14б': 'Directorate:\n'
                                              '•	dorm14b@spbstu.ru\n'
                                              '•	+7 (812) 596-29-32\n'
-                                             '•	pl. Nepokobornye, д. 8, build.2\n'
+                                             '•	пр. Непокоренных, д. 8, корп.2\n'
                                              'Group on VKontakte – vk.com/spbstu_14b\n'
                                              'Head of the hostel – Воронцова Ирина Петровна\n',
     DORM_SHORT[V_ENGLISH].lower() + ' №14ц': 'Directorate:\n'
                                              '•	dorm14c@spbstu.ru\n'
                                              '•	+7 (812) 534-48-93\n'
-                                             '•	pl. Nepokobornye, д. 8, build.2\n'
+                                             '•	пр. Непокоренных, д. 8, корп.2\n'
                                              'Group on VKontakte – vk.com/spbstu_14c\n'
                                              'Head of the hostel – Солнцева Ирина Викторовна\n',
     DORM_SHORT[V_ENGLISH].lower() + ' №17': 'Directorate:\n'
                                             '•	dorm17@spbstu.ru\n'
                                             '•	+7 (812) 555-23-32\n'
-                                            '•	st. Vavilovs, д.10, build. 2\n'
+                                            '•	ул. Вавиловых, д.10, корп. 2\n'
                                             'Group on VKontakte – vk.com/spbstu_17\n'
                                             'Head of the hostel – Назаревская Марина Викторовна\n',
     DORM_SHORT[V_ENGLISH].lower() + ' №18': 'Directorate:\n'
                                             '•	dorm18@spbstu.ru\n'
                                             '•	+7 (812) 555-76-97\n'
-                                            '•	st. Vavilovs, д.10, build. 3\n'
+                                            '•	ул. Вавиловых, д.10, корп. 3\n'
                                             'Group on VKontakte – vk.com/spbstu_18\n'
                                             'Head of the hostel – Емельнова Юлия Геннадьевна\n',
 
@@ -565,97 +562,97 @@ gl_questions_answers = {
                                            '•	dorm1@spbstu.ru\n'
                                            '•	+7 (812) 775 05 30 #1444\n'
                                            '•	+7 (812) 775 05 30 #1445\n'
-                                           '•	森林大街, 街道号: 65, 楼号:1\n'
+                                           '•	Лесной пр., д. 65, корп.1\n'
                                            'VK群 – vk.com/spbstu_1\n'
                                            '宿舍负责人 – Шевченко Ольга Николаевна',
     DORM_SHORT[V_CHINESE].lower() + ' №3': '管理局:\n'
                                            '•	dorm3@spbstu.ru\n'
                                            '•	+7 (812) 775 05 30 #1448\n'
-                                           '•	森林大街, 街道号: 65, 楼号: 3\n'
+                                           '•	Лесной пр., д. 65, корп. 3\n'
                                            'VK群 – vk.com/spbstu_3\n'
                                            '宿舍负责人 – Киреева Наталья Викторовна',
     DORM_SHORT[V_CHINESE].lower() + ' №4': '管理局:\n'
                                            '•	dorm4@spbstu.ru\n'
                                            '•	+7 (812) 775 05 30 #1451\n'
-                                           '•	Pargolovskaya路, 街道号:11, 楼号:1\n'
+                                           '•	ул. Парголовская, д.11, корп.1\n'
                                            'VK群 – vk.com/spbstu_4\n'
                                            '宿舍负责人 – Мартынова Лариса Яковлевна',
     DORM_SHORT[V_CHINESE].lower() + ' №4а': '管理局:\n'
                                             '•	dorm4a@spbstu.ru\n'
                                             '•	+7 (812) 775 05 30 #1453\n'
-                                            '•	Pargolovskaya路, 街道号:11, 楼号:1\n'
+                                            '•	ул. Парголовская, д.11, корп.1\n'
                                             'VK群 – vk.com/spbstu_4aa\n'
                                             '宿舍负责人 – Гулева Ирианда Анатольевна\n',
     DORM_SHORT[V_CHINESE].lower() + ' №5': '管理局:\n'
                                            '•	dorm5@spbstu.ru\n'
                                            '•	+7 (812) 295-47-25\n'
-                                           '•	Pargolovskaya路, 街道号:11, 楼号:2\n'
+                                           '•	ул. Парголовская, д.11, корп.2\n'
                                            'VK群 – vk.com/spbstu_5a | vk.com/spbstu_5b\n'
                                            '宿舍负责人 – Мартьянова Милена Леонидовна\n',
     DORM_SHORT[V_CHINESE].lower() + ' №6': '管理局:\n'
                                            '•	dorm6m@spbstu.ru\n'
                                            '•	+7 (812) 295-27-50\n'
-                                           '•	Kharchenko路, 街道号: 16\n'
+                                           '•	ул. Харченко, д. 16\n'
                                            'VK群 – vk.com/spbstu_6\n'
                                            '宿舍负责人 – Егорова Ольга Адамовна\n',
     DORM_SHORT[V_CHINESE].lower() + ' №7': '管理局:\n'
                                            '•	dorm7@spbstu.ru\n'
                                            '•	+7 (812) 775-05-30 #1442\n'
                                            '•	+7 (812) 775-05-30 #1443\n'
-                                           '•	森林大街, 街道号:67, 楼号:2\n'
+                                           '•	Лесной пр., д.67, корп.2\n'
                                            '宿舍负责人 – Кривошея Гульнара Куртвелиевна\n',
     DORM_SHORT[V_CHINESE].lower() + ' №8': '管理局:\n'
                                            '•	dorm8@spbstu.ru\n'
                                            '•	+7 (812) 297-43-50\n'
-                                           '•	Khlopin街, 街道号:9, 楼号:2\n'
+                                           '•	ул. Хлопина, д.9, корп.2\n'
                                            'VK群 – vk.com/spbstu_8\n'
                                            '宿舍负责人 – Бернанс Ольга Ивановна\n',
     DORM_SHORT[V_CHINESE].lower() + ' №10': '管理局:\n'
                                             '•	dorm10@spbstu.ru\n'
                                             '•	+7 (812) 297-16-78\n'
-                                            '•	Nekonkorniye街, 街道号: 6, 楼号:2\n'
+                                            '•	пр. Непокоренных, д. 6, корп.2\n'
                                             'VK群 – vk.com/spbstu_10\n'
                                             '宿舍负责人 – Текучева Елена Ивановна\n',
     DORM_SHORT[V_CHINESE].lower() + ' №11': '管理局:\n'
                                             '•	dorm11@spbstu.ru\n'
                                             '•	+7 (812) 295-00-28\n'
-                                            '•	ул. Кантемировская, 街道号: 24\n'
+                                            '•	ул. Кантемировская, д. 24\n'
                                             'VK群 – vk.com/spbstu_11\n'
                                             '宿舍负责人 – Медведева Людмила Алексеевна\n',
     DORM_SHORT[V_CHINESE].lower() + ' №12': '管理局:\n'
                                             '•	dorm12@spbstu.ru\n'
                                             '•	+7 (812) 534-47-86\n'
-                                            '•	Khlopin街, 街道号: 13, 楼号: 1\n'
+                                            '•	ул. Хлопина, д. 13, корп. 1\n'
                                             'VK群 – vk.com/spbstu_12\n'
                                             '宿舍负责人 – Пескова Ирина Викторовна\n',
     DORM_SHORT[V_CHINESE].lower() + ' №14а': '管理局:\n'
                                              '•	dorm14a@spbstu.ru\n'
                                              '•	+7 (812) 596-26-67\n'
-                                             '•	Nekonkorniye街, 街道号: 8, 楼号:2\n'
+                                             '•	пр. Непокоренных, д. 8, корп.2\n'
                                              'VK群 – vk.com/spbstu__14a\n'
                                              '宿舍负责人 – Константинова Лариса Юрьевна\n',
     DORM_SHORT[V_CHINESE].lower() + ' №14б': '管理局:\n'
                                              '•	dorm14b@spbstu.ru\n'
                                              '•	+7 (812) 596-29-32\n'
-                                             '•	Nekonkorniye街, 街道号: 8, 楼号:2\n'
+                                             '•	пр. Непокоренных, д. 8, корп.2\n'
                                              'VK群 – vk.com/spbstu_14b\n'
                                              '宿舍负责人 – Воронцова Ирина Петровна\n',
     DORM_SHORT[V_CHINESE].lower() + ' №14ц': '管理局:\n'
                                              '•	dorm14c@spbstu.ru\n'
                                              '•	+7 (812) 534-48-93\n'
-                                             '•	Nekonkorniye街, 街道号: 8, 楼号:2\n'
+                                             '•	пр. Непокоренных, д. 8, корп.2\n'
                                              'VK群 – vk.com/spbstu_14c\n'
                                              '宿舍负责人 – Солнцева Ирина Викторовна\n',
     DORM_SHORT[V_CHINESE].lower() + ' №17': '管理局:\n'
                                             '•	dorm17@spbstu.ru\n'
                                             '•	+7 (812) 555-23-32\n'
-                                            '•	Vavilovs路, 街道号:10, 楼号: 2\n'
+                                            '•	ул. Вавиловых, д.10, корп. 2\n'
                                             'VK群 – vk.com/spbstu_17\n'
                                             '宿舍负责人 – Назаревская Марина Викторовна\n',
     DORM_SHORT[V_CHINESE].lower() + ' №18': '管理局:\n'
                                             '•	dorm18@spbstu.ru\n'
                                             '•	+7 (812) 555-76-97\n'
-                                            '•	Vavilovs路, 街道号:10, 楼号: 3\n'
+                                            '•	ул. Вавиловых, д.10, корп. 3\n'
                                             'VK群 – vk.com/spbstu_18\n'
                                             '宿舍负责人 – Емельнова Юлия Геннадьевна\n',
 
@@ -692,60 +689,60 @@ gl_questions_answers = {
     DORM_LONG[V_ENGLISH].lower() + ' №13': 'Directorate:\n'
                                            '•	dorm13@spbstu.ru\n'
                                            '•	+7 (812) 534-46-65\n'
-                                           '•	pl. Civilian, д. 30\n'
+                                           '•	пр. Гражданский, д. 30\n'
                                            'Group on VKontakte – vk.com/spbstu_13\n'
                                            'Head of the hostel – Кургут Наталья Юрьевна\n',
     DORM_LONG[V_ENGLISH].lower() + ' №15': 'Directorate:\n'
                                            '•	dorm15@spbstu.ru\n'
                                            '•	+7 (812) 534-03-58\n'
-                                           '•	Civilian pl., д. 28\n'
+                                           '•	Гражданский пр., д. 28\n'
                                            'Head of the hostel – Седакова Екатерина Валерьевна\n',
     DORM_LONG[V_ENGLISH].lower() + ' №16': 'Directorate:\n'
                                            '•	dorm16@spbstu.ru\n'
                                            '•	+7 (812) 517-87-66\n'
-                                           '•	pl. Engels, д. 129, корп. 4\n'
+                                           '•	пр. Энгельса, д. 129, корп. 4\n'
                                            'Group on VKontakte – vk.com/spbstu_16\n'
                                            'Head of the hostel – Пипия Отари Силованович\n',
     DORM_LONG[V_ENGLISH].lower() + ' №19': 'Directorate:\n'
                                            '•	dorm19@spbstu.ru\n'
                                            '•	+7 (812) 373-67-96\n'
-                                           '•	st. Gastello, д.20\n'
+                                           '•	ул. Гастелло, д.20\n'
                                            'Group on VKontakte – vk.com/spbstu_19\n'
                                            'Head of the hostel – Бойко Оксана Валентиновна\n',
     DORM_LONG[V_ENGLISH].lower() + ' №20': 'Directorate:\n'
                                            '•	dorm20@spbstu.ru\n'
                                            '•	+7 (812) 316-55-08\n'
-                                           '•	Malodetskoselsky pl., 27\n'
+                                           '•	Малодетскосельский пр., 27\n'
                                            'Group on VKontakte – vk.com/spbstu_20\n'
                                            'Head of the hostel – Лошкарева Ольга Евгеньевна\n',
 
     DORM_LONG[V_CHINESE].lower() + ' №13': '管理局:\n'
                                            '• dorm13@spbstu.ru\n'
                                            '• +7 (812) 534-46-65\n'
-                                           '• 公民大街, 街道号:30\n'
+                                           '•	пр. Гражданский, д. 30\n'
                                            'VK群 – vk.com/spbstu_13\n'
                                            '宿舍负责人 – Кургут Наталья Юрьевна\n',
     DORM_LONG[V_CHINESE].lower() + ' №15': '管理局:\n'
                                            '• dorm15@spbstu.ru\n'
                                            '• +7 (812) 534-03-58\n'
-                                           '• 公民大街, 街道号:28\n'
+                                           '•	Гражданский пр., д. 28\n'
                                            '宿舍负责人 – Седакова Екатерина Валерьевна\n',
     DORM_LONG[V_CHINESE].lower() + ' №16': '管理局:\n'
                                            '• dorm16@spbstu.ru\n'
                                            '• +7 (812) 517-87-66\n'
-                                           '• Engelsa街, 街道号:129, корп. 4\n'
+                                           '•	пр. Энгельса, д. 129, корп. 4\n'
                                            'VK群 – vk.com/spbstu_16\n'
                                            '宿舍负责人 – Пипия Отари Силованович\n',
     DORM_LONG[V_CHINESE].lower() + ' №19': '管理局:\n'
                                            '• dorm19@spbstu.ru\n'
                                            '• +7 (812) 373-67-96\n'
-                                           '• Gastello街, 街道号:20\n'
+                                           '•	ул. Гастелло, д.20\n'
                                            'VK群 – vk.com/spbstu_19\n'
                                            '宿舍负责人 – Бойко Оксана Валентиновна\n',
     DORM_LONG[V_CHINESE].lower() + ' №20': '管理局:\n'
                                            '• dorm20@spbstu.ru\n'
                                            '• +7 (812) 316-55-08\n'
-                                           '• Malodetskoselsky街, 27\n'
+                                           '•	Малодетскосельский пр., 27\n'
                                            'VK群 – vk.com/spbstu_20\n'
                                            '宿舍负责人 – Лошкарева Ольга Евгеньевна\n',
 
@@ -776,15 +773,15 @@ gl_questions_answers = {
     CHECK_IN_RULES[V_ENGLISH].lower(): 'To be placed in a dormitory, applicants must:\n'
                                        '•	Receive a referral from the Admissions Committee;\n'
                                        '•	Have a document proving your identity;\n'
-                                       '•	To have the medical certificate of form 086у with obligatory mark about fluorographic examination or the separate certificate about fluorographic examination;\n'
+                                       '•	To have the medical certificate of form 086y forme with obligatory mark about fluorographic examination or the separate certificate about fluorographic examination;\n'
                                        '•	The entrants who have not reached the age of 18 and arrived without parents or other legal representatives for more than three days, it is necessary to have the notarized consent of parents (one of parents) or other legal representatives for the actions connected with settlement and registration. The document must specify the type of action for which consent is given: "I, (full name), give permission to register at the place of stay and residence of my minor son (daughter)(passport data and data of the birth certificate) in the dormitory of the Federal State Educational Institution of Higher Education "Saint-Petersburg Peter the Great University" for the period of admission tests or for the period of study at the above mentioned university";\n'
                                        '•	When you move in also need to issue a temporary registration. Registration is issued in semi-automatic mode. At some point your name will appear on a special list, you will surrender your passport and in a few days you will receive it back together with your temporary registration. Registration is mandatory for everyone, it\'s the law. The registration office for dormitory #6 is located in dormitory #1 of SPbPU (Lesnoy Prospect, 65 k.1).\n',
     CHECK_IN_RULES[V_CHINESE].lower(): '为了被安排在宿舍，申请人必须：\n'
                                        '•	接受招生委员会的推荐。\n'
                                        '•	有证明其身份的文件；\n'
-                                       '•	拥有086у表的医学证明，并附有心电图，或单独的心电图证明。\n'
-                                       '•	未满18周岁的参赛者，在没有父母或其他法定代理人的情况下到达现场3天以上的，必须要有父母（父母一方）或其他法定代理人的公证同意，才能办理落户和报名手续。文件必须说明同意的行动类型："我，（全名），允许我的未成年儿子（女儿）在通过入学考试期间或在上述大学学习期间，在FSEI VE "彼得大帝圣彼得堡理工大学 "的宿舍登记（护照数据和出生证数据）。\n'
-                                       '•	迁入时还需要开具临时登记。登记以半自动方式处理。到了某个时候，你的名字会出现在一份特殊的名单上，你会把护照还给你，几天后，你会收到护照和你的临时登记。注册是每个人的义务，这是法律规定的。6号宿舍的报名处设在SPbPU的1号宿舍（Lesnoy Prospect，65k.1）。\n',
+                                       '•	拥有医学证明，并附有心电图，或单独的心电图证明。\n'
+                                       '•	未满18周岁的参赛者，在没有父母或其他法定代理人的情况下到达现场3天以上的，必须要有父母（父母一方）或其他法定代理人的公证同意，才能办理落户和报名手续。文件必须说明同意的行动类型："我，（全名），允许我的未成年儿子（女儿）在通过入学考试期间或在上述大学学习期间，联邦国家高等教育自治教育机构 "彼得大帝圣彼得堡理工大学"的宿舍登记（护照数据和出生证数据）。\n'
+                                       '•	迁入时还需要开具临时登记。登记以半自动方式处理。到了某个时候，你的名字会出现在一份特殊的名单上，你会把护照还给你，几天后，你会收到护照和你的临时登记。注册是每个人的义务，这是法律规定的。6号宿舍的报名处设在圣彼得堡彼得大帝理工大学的1号宿舍（Lesnoy Prospect，65k.1）。\n',
 
     ORDER_PASSAGE_PUBLIC[V_RUSSIAN].lower(): 'Вход в общежитие осуществляется по единому именному пропуску Политеха, '
                                              'который получает каждый студент при поступлении в вуз. Вход и выход для '
@@ -956,7 +953,7 @@ gl_questions_answers = {
     ADMINISTRATION[
         V_ENGLISH].lower(): 'You won\'t have to interact with the administration very often, so there\'s not much advice. Don\'t quarrel with the administration, say hello when you meet them, participate in dorm life, pay on time and you\'ll have a great relationship with them. Tested:)',
     ADMINISTRATION[
-        V_CHINESE].lower(): '你不会经常与行政部门打交道，所以没有什么建议。不要与管理部门争吵，遇到他们时要打招呼，参与宿舍生活，按时付款，你就会与他们建立良好的关系。经过测试(*･ω-q) ',
+        V_CHINESE].lower(): '你不会经常与行政部门打交道，所以没有什么建议。不要与管理部门争吵，遇到他们时要打招呼，参与宿舍生活，按时付款，你就会与他们建立良好的关系。亲测(*･ω-q) ',
 
     COCKROACHES[
         V_RUSSIAN].lower(): 'В общежитии в некоторых комнатах много тараканов, а где-то их вовсе нет. Следующие правила помогут тебе избежать встречи с ними.\n'

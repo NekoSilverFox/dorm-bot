@@ -61,8 +61,8 @@ def main():
                 elif keyboard is not None:
                     # msg_with_keyboard = get_answer_from_dec(msg)
                     sender(vk_session, 'user_id', user_id,
-                           message=MSG_WELCOME,
-                           keyboard=create_keyboard(CHANGE_LANGUAGE[Language.RUSSIAN.value].lower()))
+                           message=answer,
+                           keyboard=keyboard)
 
                 else:  # [keyboard is None and is_first_time_use(user_id)==False]
                     if msg in SET_LANGUAGE:
