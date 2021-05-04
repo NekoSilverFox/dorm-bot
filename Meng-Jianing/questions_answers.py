@@ -78,8 +78,8 @@ WHAT_TO_BUY_LOCALLY = ('Что купить на месте', 'What to buy local
 gl_questions_answers = {
     'hello123': 'Hello there',
     'help': 'We also need help qwq',
-    'русский': 'Текущим языком уже является русский',
-    'english': 'Changed language to English',
+    'русский': 'Текущим языком является русский',
+    'english': 'The current language is English',
     '中文': '已将语言设置为简体中文',
 
     CLUB[V_RUSSIAN].lower(): 'Студклуб – это место твоего яркого студенчества!\n'

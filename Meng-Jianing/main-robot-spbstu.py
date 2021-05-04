@@ -44,7 +44,7 @@ def main():
                 user_id = event.user_id
                 language = get_user_language(user_id)
                 keyboard = create_keyboard(msg, language=language)
-                answer = get_answer_from_dic(msg)
+                answer = get_answer_from_dic(language, msg)
                 print('[%s]: [INFO] Get msg from user VK-ID: [%d], Message: [%s], language: [%s]' % (
                     get_time(), user_id, msg, language))
 
@@ -53,11 +53,16 @@ def main():
                            message=MSG_WELCOME,
                            keyboard=create_keyboard(CHANGE_LANGUAGE[Language.RUSSIAN.value].lower()))
 
+                elif answer in MSG_NO_ANSWER:
+                    sender(vk_session, 'user_id', user_id,
+                           message=answer,
+                           keyboard=None)
+
                 elif keyboard is not None:
                     # msg_with_keyboard = get_answer_from_dec(msg)
                     sender(vk_session, 'user_id', user_id,
-                           message=answer,
-                           keyboard=keyboard)
+                           message=MSG_WELCOME,
+                           keyboard=create_keyboard(CHANGE_LANGUAGE[Language.RUSSIAN.value].lower()))
 
                 else:  # [keyboard is None and is_first_time_use(user_id)==False]
                     if msg in SET_LANGUAGE:

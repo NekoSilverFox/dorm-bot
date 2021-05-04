@@ -11,15 +11,22 @@ import random
 import time
 from questions_answers import gl_questions_answers, Language
 
-
 """ 保存用户 Info, Сохранить Info пользователя
 key - vk ID
 Value - UserInfo
 """
 gl_user_dic = {}
 
+MSG_NO_ANSWER = ['Ой, я не знаю таких слов! (〃´-ω･)',
+                 'Oh, I don\'t know those words! (〃´-ω･)',
+                 '我不晓得你在说啥！ (〃´-ω･)']
 
-MSG_NO_ANSWER = 'Ой, я незнаю таких слов! (〃´-ω･)'
+GET_MSG_NO_ANSWER_WITH_LANGUAGE = {Language.RUSSIAN: MSG_NO_ANSWER[0],
+                                   Language.ENGLISH: MSG_NO_ANSWER[1],
+                                   Language.CHINESE: MSG_NO_ANSWER[2]}
+
+
+# MSG_NO_ANSWER = 'Ой, я не знаю таких слов! (〃´-ω･)'
 
 
 class UserInfo(object):
@@ -71,7 +78,7 @@ def sender(vk_session, id_type, vk_id, message=None, keyboard=None, attachment=N
                        'keyboard': keyboard, 'attachment': attachment})
 
 
-def get_answer_from_dic(question):
+def get_answer_from_dic(language, question):
     """ Get the answer to the specified question or keyword from the Dictionary and return it
 
     :param question: [string] String or keyword of the question
@@ -80,7 +87,7 @@ def get_answer_from_dic(question):
     try:
         answer = gl_questions_answers[question]
     except Exception as unknown:
-        answer = MSG_NO_ANSWER
+        answer = GET_MSG_NO_ANSWER_WITH_LANGUAGE[language]
     return answer
 
 
