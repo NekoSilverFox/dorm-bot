@@ -3,7 +3,7 @@
 # @Author  : Meng Jianing
 # @FileName: keyboard_functions.py
 # @Software: PyCharm
-# @Versions: v1.1
+# @Versions: v1.5
 # @Github  ：https://github.com/NekoSilverFox
 # --------------------------------------------
 

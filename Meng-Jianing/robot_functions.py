@@ -3,7 +3,7 @@
 # @Author  : Meng Jianing
 # @FileName: robot_functions.py
 # @Software: PyCharm
-# @Versions: v1.3
+# @Versions: v1.5
 # @Github  ：https://github.com/NekoSilverFox
 # --------------------------------------------
 
@@ -81,6 +81,7 @@ def sender(vk_session, id_type, vk_id, message=None, keyboard=None, attachment=N
 def get_answer_from_dic(language, question):
     """ Get the answer to the specified question or keyword from the Dictionary and return it
 
+    :param language: the respond language (better be user language)
     :param question: [string] String or keyword of the question
     :return: Matching successful string (answer)
     """
